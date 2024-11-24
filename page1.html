@@ -1,0 +1,3016 @@
+﻿<script src="https://code.jquery.com/jquery-3.5.1.js">
+</script>
+
+<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js">
+</script>
+<script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js">
+</script>
+
+
+<head id="head">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Covid-19 Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+
+<body style="background-color:#041f47;">
+  <nav class="navbar sticky-top">
+    <p id="navp">
+
+      <a href="./index.html" class="navbar-brand" style="float:left;padding-right:8px;margin-right:0px;" id="nava">Home</a>
+
+    </p>
+  </nav>
+
+  <div class="row">
+    <div class="col-lg-3">
+
+      <div id="col3function" class="container--wrap lg-navy-4">
+        <div id="Country">
+
+        </div>
+        <div id="confirmed">
+        </div>
+        <div id="deaths">
+
+        </div>
+        <div id="newCases">
+
+        </div>
+
+        <div id="newDeaths">
+
+        </div>
+        <div class="clear">
+
+        </div>
+        <div id="Recovered">
+        </div>
+        <div id="Active">
+
+        </div>
+        <div id="Critical">
+
+        </div>
+        <div class="clear">
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col col-lg-9 tables">
+      <div class="row m-0">
+        <div id="ipbased">
+
+        </div>
+        <div id="americacontainer" class="container--wrap bg-navy-4 table-container col">
+          <div class="sorted-table">
+            <h1 style="color:#d5d8de;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg" style="width:80px;position:relative;margin-left:5px;">
+              USA
+            </h1>
+            <div id="usaTableDiv" class="myfirsttable"></div>
+            <table id="usaTable" class="table table-striped table-dark table-condensed">
+              <thead>
+                <tr id="usathead">
+                </tr>
+              </thead>
+              <tbody>
+                <tr id="Alaska">
+                  <td id="Alaskatd"> Alaska</td>
+                </tr>
+                <tr id="Alabama">
+                  <td id="Alabamatd"> Alabama
+                  </td>
+                </tr>
+                <tr id="usatotal">
+                  <td id="usatotaltd"> United States(Total)</td>
+                </tr>
+                <tr id="Arkansas">
+                  <td id="Arkansastd"> Arkansas</td>
+                </tr>
+                <tr id="Arizona">
+                  <td id="Arizonatd"> Arizona</td>
+                </tr>
+                <tr id="California">
+                  <td id="Californiatd"> California</td>
+                </tr>
+                <tr id="Colorado">
+                  <td id="Coloradotd"> Colorado</td>
+                </tr>
+                <tr id="Connecticut">
+                  <td id="Connecticuttd"> Connecticut</td>
+                </tr>
+                <tr id="Dcolumbia">
+                  <td id="Dcolumbiatd"> District Of Columbia</td>
+                </tr>
+                <tr id="Delaware">
+                  <td id="Delawaretd"> Delaware</td>
+                </tr>
+                <tr id="Florida">
+                  <td id="Floridatd"> Florida</td>
+                </tr>
+                <tr id="Georgia">
+                  <td id="Georgiatd"> Georgia</td>
+                </tr>
+                <tr id="Guam">
+                  <td id="Guamtd"> Guam</td>
+                </tr>
+                <tr id="Hawaii">
+                  <td id="Hawaiitd"> Hawaii</td>
+                </tr>
+                <tr id="Iowa">
+                  <td id="Iowatd"> Iowa</td>
+                </tr>
+                <tr id="Idaho">
+                  <td id="Idahotd"> Idaho</td>
+                </tr>
+                <tr id="Illinois">
+                  <td id="Illinoistd"> Illinois</td>
+                </tr>
+                <tr id="Indiana">
+                  <td id="Indianatd"> Indiana</td>
+                </tr>
+                <tr id="Kansas">
+                  <td id="Kansastd"> Kansas</td>
+                </tr>
+                <tr id="Kentucky">
+                  <td id="Kentuckytd"> Kentucky</td>
+                </tr>
+                <tr id="Louisiana">
+                  <td id="Louisianatd"> Louisiana</td>
+                </tr>
+                <tr id="Massachusetts">
+                  <td id="Massachusettstd"> Massachusetts</td>
+                </tr>
+                <tr id="Maryland">
+                  <td id="Marylandtd"> Maryland</td>
+                </tr>
+                <tr id="Maine">
+                  <td id="Mainetd"> Maine</td>
+                </tr>
+                <tr id="Michigan">
+                  <td id="Michigantd"> Michigan</td>
+                </tr>
+                <tr id="Minnesota">
+                  <td id="Minnesotatd"> Minnesota</td>
+                </tr>
+                <tr id="Missouri">
+                  <td id="Missouritd"> Missouri</td>
+                </tr>
+                <tr id="Northern Marianas">
+                  <td id="Northern Marianastd"> Northern Marianas</td>
+                </tr>
+                <tr id="Mississippi">
+                  <td id="Mississippitd"> Mississippi</td>
+                </tr>
+                <tr id="Montana">
+                  <td id="Montanatd"> Montana</td>
+                </tr>
+                <tr id="North Carolina">
+                  <td id="North Carolinatd"> North Carolina</td>
+                </tr>
+                <tr id="North Dakota">
+                  <td id="North Dakotatd"> North Dakota</td>
+                </tr>
+                <tr id="Nebraska">
+                  <td id="Nebraskatd"> Nebraska</td>
+                </tr>
+                <tr id="New Hampshire	">
+                  <td id="New Hampshire	td"> New Hampshire</td>
+                </tr>
+                <tr id="New Jersey">
+                  <td id="New Jerseytd"> New Jersey</td>
+                </tr>
+                <tr id="New Mexico">
+                  <td id="New Mexicotd"> New Mexico</td>
+                </tr>
+                <tr id="Nevada">
+                  <td id="Nevadatd"> Nevada</td>
+                </tr>
+                <tr id="New York">
+                  <td id="New Yorktd"> New York</td>
+                </tr>
+                <tr id="Ohio">
+                  <td id="Ohiotd"> Ohio</td>
+                </tr>
+                <tr id="Oklahoma">
+                  <td id="Oklahomatd"> Oklahoma</td>
+                </tr>
+                <tr id="Oregon">
+                  <td id="Oregontd"> Oregon</td>
+                </tr>
+                <tr id="Pennsylvania">
+                  <td id="Pennsylvaniatd"> Pennsylvania</td>
+                </tr>
+                <tr id="Puerto Rico">
+                  <td id="Puerto Ricotd"> Puerto Rico</td>
+                </tr>
+                <tr id="Rhode Island">
+                  <td id="Rhode Islandtd"> Rhode Island</td>
+                </tr>
+                <tr id="South Carolina">
+                  <td id="South Carolinatd"> South Carolina</td>
+                </tr>
+                <tr id="South Dakota">
+                  <td id="South Dakotatd"> South Dakota</td>
+                </tr>
+                <tr id="Tennessee">
+                  <td id="Tennesseetd"> Tennessee</td>
+                </tr>
+                <tr id="Texas">
+                  <td id="Texastd"> Texas</td>
+                </tr>
+
+                <tr id="Utah">
+                  <td id="Utahtd"> Utah</td>
+                </tr>
+                <tr id="Virginia">
+                  <td id="Virginiatd"> Virginia</td>
+                </tr>
+                <tr id="Virgin Islands">
+                  <td id="Virgin Islandstd"> Virgin Islands</td>
+                </tr>
+                <tr id="Vermont">
+                  <td id="Vermonttd"> Vermont</td>
+                </tr>
+                <tr id="Washington">
+                  <td id="Washingtontd"> Washington</td>
+                </tr>
+                <tr id="Wisconsin">
+                  <td id="Wisconsintd"> Wisconsin</td>
+                </tr>
+                <tr id="West Virginia">
+                  <td id="West Virginiatd"> West Virginia</td>
+                </tr>
+                <tr id="Wyoming">
+                  <td id="Wyomingtd"> Wyoming</td>
+                </tr>
+
+
+              </tbody>
+            </table>
+          </div>
+
+
+        </div>
+        <div id="brazilcontainer" class="container--wrap bg-navy-4 table-container col">
+          <div class="sorted-table">
+            <h1 style="color:#d5d8de;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg" style="width:80px;position:relative;margin-left:5px;">
+              Brazil
+            </h1>
+            <div id="brazilTableDiv" class="myfirsttable">
+              <table id="brazilTable" class="table table-striped table-dark table-condensed">
+                <thead>
+                  <tr id="brazilthead">
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr id="Acre">
+                    <td id="Acretd"> Acre</td>
+                  </tr>
+                  <tr id="Alagoas">
+                    <td id="Alagoastd"> Alagoas</td>
+                  </tr>
+                  <tr id="Amazonas">
+                    <td id="Amazonastd"> Amazonas</td>
+                  </tr>
+                  <tr id="Amapa">
+                    <td id="Amapatd"> Amapa</td>
+                  </tr>
+                  <tr id="Bahia">
+                    <td id="Bahiatd"> Bahia</td>
+                  </tr>
+                  <tr id="Ceara">
+                    <td id="Cearatd"> Alagoas</td>
+                  </tr>
+                  <tr id="Distrito Federal">
+                    <td id="Distrito Federaltd"> Distrito Federal</td>
+                  </tr>
+                  <tr id="Espirito Santo">
+                    <td id="Espirito Santotd"> Espirito Santo</td>
+                  </tr>
+                  <tr id="Goias">
+                    <td id="Goiastd"> Goias</td>
+                  </tr>
+                  <tr id="Maranhao">
+                    <td id="Maranhaotd"> Maranhao</td>
+                  </tr>
+                  <tr id="Minas Gerais">
+                    <td id="Minas Geraistd"> Minas Gerais</td>
+                  </tr>
+                  <tr id="Mato Grosso do Sul">
+                    <td id="Mato Grosso do Sultd"> Mato Grosso do Sul</td>
+                  </tr>
+
+                  <tr id="Mato Grosso">
+                    <td id="Mato Grossotd"> Mato Grosso</td>
+                  </tr>
+                  <tr id="Para">
+                    <td id="Paratd"> Para</td>
+                  </tr>
+                  <tr id="Paraiba">
+                    <td id="Paraibatd"> Paraíba</td>
+                  </tr>
+                  <tr id="Pernambuco">
+                    <td id="Pernambucotd"> Pernambuco</td>
+                  </tr>
+                  <tr id="Paraui">
+                    <td id="Parauitd"> Paraui</td>
+                  </tr>
+                  <tr id="Parana">
+                    <td id="Paranatd"> Paraná</td>
+                  </tr>
+
+                  <tr id="Rio de Janeiro">
+                    <td id="Rio de Janeirotd"> Rio de Janeiro</td>
+                  </tr>
+                  <tr id="Rio Grande do Norte">
+                    <td id="Rio Grande do Nortetd"> Rio Grande do Norte</td>
+                  </tr>
+                  <tr id="Rondonia">
+                    <td id="Rondoniatd"> Rondonia</td>
+                  </tr>
+                  <tr id="Roraima">
+                    <td id="Roraimatd"> Roraima</td>
+                  </tr>
+                  <tr id="Rio Grande do Sul">
+                    <td id="Rio Grande do Sultd"> Rio Grande do Sul</td>
+                  </tr>
+
+                  <tr id="Santa Catarina">
+                    <td id="Santa Catarinatd"> Santa Catarina</td>
+                  </tr>
+                  <tr id="Sergipe">
+                    <td id="Sergipetd"> Sergipe</td>
+                  </tr>
+                  <tr id="Sao Paulo">
+                    <td id="Sao Paulotd"> Sao Paulo</td>
+                  </tr>
+                  <tr id="Tocantins">
+                    <td id="Tocantinstd"> Tocantins</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+          </div>
+        </div>
+
+        <div id="italycontainer" class="container--wrap bg-navy-4 table-container col">
+          <div class="sorted-table">
+            <h1 style="color: #d5d8de"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Flag_of_Italy_%281-2%29.svg/800px-Flag_of_Italy_%281-2%29.svg.png" style="width:80px;position:relative;margin-left:5px;"> Italy</h1>
+            <div id="myfirsttable" class="myfirsttable">
+              <table id="example" class="table table-striped table-dark table-condensed">
+
+                <thead class="noborder">
+                  <tr id="italyheadrow">
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr id="italytotal" style="font-weight:bold;">
+                    <td id="italytotaltd"> Italy(Total) </td>
+                  </tr>
+                  <tr id="Abruzzo" style="font-weight:bold;">
+                    <td id="Abruzzotd"> Abruzzo</td>
+                  </tr>
+                  <tr id="Basilicata" style="font-weight:bold;">
+                    <td id="Basilicatatd"> Basilicata</td>
+                  </tr>
+                  <tr id="Bolzano" style="font-weight:bold;">
+                    <td id="Bolzanotd"> P.A. Bolzano</td>
+                  </tr>
+                  <tr id="Calabria" style="font-weight:bold;">
+                    <td id="Calabriatd"></td>
+                  </tr>
+                  <tr id="Campania" style="font-weight:bold;">
+                    <td id="Campaniatd"> Campania</td>
+                  </tr>
+                  <tr id="Romagna" style="font-weight:bold;">
+                    <td id="Romagnatd" style="font-weight:bold;"> Emilia-Romagna</td>
+                  </tr>
+                  <tr id="Venezia" style="font-weight:bold;">
+                    <td id="Veneziatd"> Friuli Venezia Giulia</td>
+                  </tr>
+                  <tr id="Lazio" style="font-weight:bold;">
+                    <td id="Laziotd"> Lazio</td>
+                  </tr>
+                  <tr id="Liguria" style="font-weight:bold;">
+                    <td id="Liguriatd"> Liguria</td>
+                  </tr>
+                  <tr id="Lombardia" style="font-weight:bold;">
+                    <td id="Lombardiatd">Lombardia</td>
+                  </tr>
+                  <tr id="Marche" style="font-weight:bold;">
+                    <td id="Marchetd"> Marche</td>
+                  </tr>
+                  <tr id="Molise" style="font-weight:bold;">
+                    <td id="Molisetd"> Molise</td>
+                  </tr>
+                  <tr id="Piedmonte" style="font-weight:bold;">
+                    <td id="Piedmontetd"> Piedmonte</td>
+                  </tr>
+                  <tr id="Puglia" style="font-weight:bold;">
+                    <td id="Pugliatd"> Puglia</td>
+                  </tr>
+                  <tr id="Sardegna" style="font-weight:bold;">
+                    <td id="Sardegnatd"> Sardegna</td>
+                  </tr>
+                  <tr id="Sicilia" style="font-weight:bold;">
+                    <td id="Siciliatd"> Sicilia</td>
+                  </tr>
+                  <tr id="Toscana" style="font-weight:bold;">
+                    <td id="Toscanatd"> Toscana</td>
+                  </tr>
+                  <tr id="Trento" style="font-weight:bold;">
+                    <td id="Trentotd">Trento</td>
+                  </tr>
+                  <tr id="Umbria" style="font-weight:bold;">
+                    <td id="Umbriatd"> Umbria</td>
+                  </tr>
+                  <tr id="Valle" style="font-weight:bold;">
+                    <td id="Valletd"> Valle d'Aosta</td>
+                  </tr>
+                  <tr id="Veneto" style="font-weight:bold;">
+                    <td id="Venetotd"> Veneto</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div>
+        </div>
+        <div id="pakcontainer" class="container--wrap bg-navy-4 table-container col">
+          <div class="sorted-table">
+            <h1 style="color:#d5d8de">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/32/Flag_of_Pakistan.svg" style="width:80px;position:relative;margin-left:5px;margin-top:3px;">
+              Pakistan
+            </h1>
+            <div id="pakTableDiv" class="myfirsttable">
+              <table id="pakTable" class="table table-striped table-dark table-condensed">
+                <thead>
+                  <tr id="pakTablethead"></tr>
+                </thead>
+                <tbody>
+                  <tr id="sindh">
+                    <td id="sindhtd"> Sindh</td>
+                  </tr>
+                  <tr id="punjab">
+                    <td id="punjabtd"> Punjab</td>
+                  </tr>
+                  <tr id="balochistan">
+                    <td id="balochistantd"> Balochistan </td>
+                  </tr>
+                  <tr id="KPK">
+                    <td id="KPKtd">KPK</td>
+                  </tr>
+                  <tr id="gilgit">
+                    <td id="gilgittd"> Gilgit Baltistan</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div id="sindhcontainer" class="container--wrap bg-navy-4 table-container col">
+          <div class="sorted-table">
+            <h1 style="color:#d5d8de">
+              Sindh
+            </h1>
+            <div id="sindhTableDiv" class="myfirsttable">
+              <table id="sindhTable" class="table table-striped table-dark table-condensed">
+                <thead>
+                  <tr id="sindhthead"></tr>
+                </thead>
+                <tbody>
+                  <tr id="karachi">
+                    <td id="karachitd"> Karachi</td>
+                  </tr>
+                  <tr id="sukkur">
+                    <td id="sukkurtd"> Sukkur (District)</td>
+                  </tr>
+                  <tr id="ghotki">
+                    <td id="ghotkitd"> Ghotki (District)</td>
+                  </tr>
+                  <tr id="ghotkic">
+                    <td id="ghotkictd"> Ghotki (City)</td>
+                  </tr>
+                  <tr id="ubauro">
+                    <td id="ubaurotd"> Ubauro</td>
+                  </tr>
+                  <tr id="daharki">
+                    <td id="daharkitd"> Daharki</td>
+                  </tr>
+                  <tr id="hyderabad">
+                    <td id="hyderabadtd"> Hyderabad</td>
+                  </tr>
+                  <tr id="larkana">
+                    <td id="larkanatd"> Larkana (District)</td>
+                  </tr>
+                  <tr id="mpm">
+                    <td id="mpmtd"> Mirpur Mathelo(MPM)</td>
+                  </tr>
+                  <tr id="khanpur">
+                    <td id="khanpurtd"> Khangarh at Khanpur</td>
+                  </tr>
+                  <tr id="khairpur">
+                    <td id="khairpurtd"> Khairpur (District)</td>
+                  </tr>
+                  <tr id="shikarpur">
+                    <td id="shikarpurtd"> Shikarpur (District)</td>
+                  </tr>
+
+                  <tr id="jacobabad">
+                    <td id="jacobabadtd"> Jacobabad</td>
+                  </tr>
+                  <tr id="shaheed">
+                    <td id="shaheedtd"> Shaheed Benazirabad</td>
+                  </tr>
+                  <tr id="kambar">
+                    <td id="kambartd"> Kambar at Shahdadkot</td>
+                  </tr>
+                  <tr id="sanghar">
+                    <td id="sanghartd"> Sanghar</td>
+                  </tr>
+                  <tr id="jamshoro">
+                    <td id="jamshorotd"> Jamshoro</td>
+                  </tr>
+
+                  <tr id="kashmore">
+                    <td id="kashmoretd"> Kashmore (District)</td>
+                  </tr>
+                  <tr id="dadu">
+                    <td id="dadutd"> Dadu</td>
+                  </tr>
+                  <tr id="mirpur">
+                    <td id="mirpurtd"> MirpurKhas</td>
+                  </tr>
+                  <tr id="badin">
+                    <td id="badintd"> Badin</td>
+                  </tr>
+                  <tr id="tando">
+                    <td id="tandotd"> Tando Muhammad Khan</td>
+                  </tr>
+                  <tr id="sujawal">
+                    <td id="sujawaltd"> Sujawal</td>
+                  </tr>
+                  <tr id="naushero">
+                    <td id="nausherotd"> Naushero Feroz</td>
+                  </tr>
+
+                  <tr id="matiari">
+                    <td id="matiaritd"> Matiari</td>
+                  </tr>
+                  <tr id="tharparkar">
+                    <td id="tharparkartd"> Tharparkar</td>
+                  </tr>
+                  <tr id="thatta">
+                    <td id="thattatd"> Thatta (District)</td>
+                  </tr>
+                  <tr id="umerkot">
+                    <td id="umerkottd"> Umerkot</td>
+                  </tr>
+                  <tr id="allahyar">
+                    <td id="allahyartd"> Tando Allahyar</td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div id="punjabcontainer" class="container--wrap bg-navy-4 table-container col">
+          <div class="sorted-table">
+            <h1 style="color:#d5d8de">
+              Punjab
+            </h1>
+            <div id="punjabTableDiv" class="myfirsttable">
+              <table id="punjabTable" class="table table-striped table-dark table-condensed">
+                <thead>
+                  <tr id="punjabthead"></tr>
+                </thead>
+                <tbody>
+                  <tr id="Attock">
+                    <td id="Attocktd"> Attock</td>
+                  </tr>
+                  <tr id="Bhawalnagar">
+                    <td id="Bhawalnagartd"> Bhawalnagar</td>
+                  </tr>
+                  <tr id="Bhawalpur">
+                    <td id="Bhawalpurtd"> Bhawalpur</td>
+                  </tr>
+                  <tr id="Bhakkar">
+                    <td id="Bhakkartd"> Bhakkar</td>
+                  </tr>
+                  <tr id="Chakwal">
+                    <td id="Chakwaltd"> Chakwal</td>
+                  </tr>
+                  <tr id="Chiniot">
+                    <td id="Chiniottd"> Chiniot</td>
+                  </tr>
+                  <tr id="DG Khan">
+                    <td id="DG Khantd"> DG Khan</td>
+                  </tr>
+                  <tr id="Faisalabad">
+                    <td id="Faisalabadtd"> Faisalabad</td>
+                  </tr>
+
+                  <tr id="Gujranwala">
+                    <td id="Gujranwalatd">Gujranwala</td>
+                  </tr>
+                  <tr id="Gujrat">
+                    <td id="Gujrattd">Gujrat</td>
+                  </tr>
+                  <tr id="Hafizabad">
+                    <td id="Hafizabadtd">Hafizabad</td>
+                  </tr>
+                  <tr id="Jhang">
+                    <td id="Jhangtd">Jhang</td>
+                  </tr>
+                  <tr id="Jhelum">
+                    <td id="Jhelumtd">Jhelum</td>
+                  </tr>
+                  <tr id="Kasur">
+                    <td id="Kasurtd">Kasur</td>
+                  </tr>
+                  <tr id="Khanewal">
+                    <td id="Khanewaltd">Khanewal</td>
+                  </tr>
+                  <tr id="Khushab">
+                    <td id="Khushabtd">Khushab</td>
+                  </tr>
+
+                  <tr id="Lahore">
+                    <td id="Lahoretd">Lahore</td>
+                  </tr>
+                  <tr id="Lodharan">
+                    <td id="Lodharantd">Lodharan</td>
+                  </tr>
+                  <tr id="Layyah">
+                    <td id="Layyahtd">Layyah</td>
+                  </tr>
+                  <tr id="MB Din">
+                    <td id="MB Dintd">MB Din</td>
+                  </tr>
+                  <tr id="Mianwali">
+                    <td id="Mianwalitd">Mianwali</td>
+                  </tr>
+                  <tr id="Multan">
+                    <td id="Multantd">Multan</td>
+                  </tr>
+                  <tr id="Muzaffargarh">
+                    <td id="Muzaffargarhtd">Muzaffargarh</td>
+                  </tr>
+                  <tr id="Narowal">
+                    <td id="Narowaltd">Narowal</td>
+                  </tr>
+
+                  <tr id="Nankana">
+                    <td id="Nankanatd"> Nankana</td>
+                  </tr>
+                  <tr id="Okara">
+                    <td id="Okaratd"> Okara</td>
+                  </tr>
+                  <tr id="Pakpattan">
+                    <td id="Pakpattantd"> Pakpattan</td>
+                  </tr>
+                  <tr id="RY Khan">
+                    <td id="RY Khantd"> RY Khan</td>
+                  </tr>
+                  <tr id="Rajanpur">
+                    <td id="Rajanpurtd"> Rajanpur</td>
+                  </tr>
+                  <tr id="Rawalpindi">
+                    <td id="Rawalpinditd">Rawalpindi</td>
+                  </tr>
+                  <tr id="Sahiwal">
+                    <td id="Sahiwaltd">Sahiwal</td>
+                  </tr>
+                  <tr id="Sargodha">
+                    <td id="Sargodhatd">Sargodha</td>
+                  </tr>
+
+                  <tr id="Sheikhupura">
+                    <td id="Sheikhupuratd">Sheikhupura</td>
+                  </tr>
+                  <tr id="Sialkot">
+                    <td id="Sialkottd"> Sialkot</td>
+                  </tr>
+                  <tr id="TT Singh">
+                    <td id="TT Singhtd"> TT Singh</td>
+                  </tr>
+                  <tr id="Vehari">
+                    <td id="Veharitd"> Vehari</td>
+                  </tr>
+
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div id="kpkcontainer" class="container--wrap bg-navy-4 table-container col">
+          <div class="sorted-table">
+            <h1 style="color:#d5d8de">
+              KPK
+            </h1>
+            <div id="kpkTableDiv" class="myfirsttable">
+              <table id="kpkTable" class="table table-striped table-dark table-condensed">
+                <thead>
+                  <tr id="kpkthead"></tr>
+                </thead>
+                <tbody>
+                  <tr id="Peshawar(Division)">
+                    <td id="Peshawar(Division)td">Peshawar (Division)</td>
+                  </tr>
+                  <tr id="Peshawar">
+                    <td id="Peshawartd">Peshawar (City)</td>
+                  </tr>
+                  <tr id="Charsadda">
+                    <td id="Charsaddatd">Charsadda</td>
+                  </tr>
+                  <tr id="Nowshera">
+                    <td id="Nowsheratd">Nowshera</td>
+                  </tr>
+                  <tr id="Khyber">
+                    <td id="Khybertd">Khyber</td>
+                  </tr>
+                  <tr id="Mohmand">
+                    <td id="Mohmandtd">Mohmand</td>
+                  </tr>
+
+                  <tr id="Mardan(Division)">
+                    <td id="Mardan(Division)td">Mardan (Division)</td>
+                  </tr>
+                  <tr id="Swabi">
+                    <td id="Swabitd">Swabi</td>
+                  </tr>
+                  <tr id="Mardan">
+                    <td id="Mardantd">Mardan</td>
+                  </tr>
+                  <tr id="Malakand (Division)">
+                    <td id="Malakand (Division)td">Malakand (Division)</td>
+                  </tr>
+                  <tr id="SWAT">
+                    <td id="SWATtd">SWAT</td>
+                  </tr>
+                  <tr id="Buner">
+                    <td id="Bunertd">Buner</td>
+                  </tr>
+
+                  <tr id="DIR LOWER">
+                    <td id="DIR LOWERtd">DIR LOWER</td>
+                  </tr>
+                  <tr id="DIR UPPER">
+                    <td id="DIR UPPERtd">DIR UPPER</td>
+                  </tr>
+                  <tr id="Shangla">
+                    <td id="Shanglatd">Shangla</td>
+                  </tr>
+                  <tr id="MalaKand">
+                    <td id="MalaKandtd">MalaKand</td>
+                  </tr>
+                  <tr id="Chitral Lower">
+                    <td id="Chitral Lowertd">Chitral Lower</td>
+                  </tr>
+                  <tr id="Chitral Upper">
+                    <td id="Chitral Uppertd">Chitral Upper</td>
+                  </tr>
+                  <tr id="Bajaur">
+                    <td id="Bajaurtd">Bajaur</td>
+                  </tr>
+
+
+                  <tr id="Hazara Division">
+                    <td id="Hazara Divisiontd">Hazara Division</td>
+                  </tr>
+                  <tr id="Mansehra">
+                    <td id="Mansehratd">Mansehra</td>
+                  </tr>
+                  <tr id="Abbottabad">
+                    <td id="Abbottabadtd">Abbottabad</td>
+                  </tr>
+                  <tr id="Haripur">
+                    <td id="Haripurtd">Haripur</td>
+                  </tr>
+                  <tr id="Tor Ghar">
+                    <td id="Tor Ghartd">Tor Ghar</td>
+                  </tr>
+                  <tr id="Kohistan Upper">
+                    <td id="Kohistan Uppertd">Kohistan Upper</td>
+                  </tr>
+
+                  <tr id="Kohistan Lower">
+                    <td id="Kohistan Lowertd">Kohistan Lower</td>
+                  </tr>
+                  <tr id="Kolai Pallas">
+                    <td id="Kolai Pallastd">Kolai Pallas</td>
+                  </tr>
+                  <tr id="Battagram">
+                    <td id="Battagramtd">Battagram</td>
+                  </tr>
+                  <tr id="Kohat (Division)">
+                    <td id="Kohat (Division)td">Kohat (Division)</td>
+                  </tr>
+                  <tr id="Kohat ">
+                    <td id="Kohat td">Kohat</td>
+                  </tr>
+                  <tr id="Hangu">
+                    <td id="Hangutd">Hangu</td>
+                  </tr>
+
+                  <tr id="Karak">
+                    <td id="Karaktd">Karak</td>
+                  </tr>
+                  <tr id="Kurram">
+                    <td id="Kurramtd">Kurram</td>
+                  </tr>
+                  <tr id="Orakzai">
+                    <td id="Orakzaitd">Orakzai</td>
+                  </tr>
+                  <tr id="Bannu (Division)">
+                    <td id="Bannu (Division)td">Bannu (Division)</td>
+                  </tr>
+                  <tr id="Bannu">
+                    <td id="Bannutd">Bannu(City)</td>
+                  </tr>
+                  <tr id="Lakki Marwat">
+                    <td id="Lakki Marwattd">Lakki Marwat</td>
+                  </tr>
+
+                  <tr id="North Waziristan">
+                    <td id="North Waziristantd">North Waziristan</td>
+                  </tr>
+
+                  <tr id="Dera Ismail Khan (Division)">
+                    <td id="Dera Ismail Khan (Division)td">Dera Ismail Khan (Division)</td>
+                  </tr>
+                  <tr id="Tank">
+                    <td id="Tanktd">Tank</td>
+                  </tr>
+                  <tr id="South Waziristan">
+                    <td id="South Waziristantd">South Waziristan</td>
+                  </tr>
+                  <tr id="Dera Ismail Khan ">
+                    <td id="Dera Ismail Khan td">Dera Ismail Khan</td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+
+        <div id="canadacontainer" class="container--wrap bg-navy-4 table-container col">
+          <div class="sorted-table">
+            <h1 style="color:#d5d8de">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Canada.svg" style="width:80px;position:relative;margin-left:5px;">
+              Canada
+            </h1>
+            <div id="canadaTableDiv" class="myfirsttable">
+              <table id="canadaTable" class="table table-striped table-dark table-condensed">
+                <thead>
+                  <tr id="canadaTableHeader">
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr id="cantotal">
+                    <td id="cantotaltd"> Canada (Total)</td>
+                  </tr>
+                  <tr id="Alberta">
+                    <td id="Albertatd"> Alberta</td>
+                  </tr>
+                  <tr id="BC">
+                    <td id="BCtd"> British Columbia</td>
+                  </tr>
+                  <tr id="Manitoba">
+                    <td id="Manitobatd"> Manitoba</td>
+                  </tr>
+                  <tr id="NewBrunswick">
+                    <td id="NewBrunswicktd"> New Brunswick</td>
+                  </tr>
+                  <tr id="NL">
+                    <td id="NLtd"> Newfoundland and Labrador</td>
+                  </tr>
+                  <tr id="Nova">
+                    <td id="Novatd"> Nova Scotia</td>
+                  </tr>
+                  <tr id="Nunavut">
+                    <td id="Nunavuttd"> Nunavut</td>
+                  </tr>
+                  <tr id="NWT">
+                    <td id="NWTtd"> NWT</td>
+                  </tr>
+                  <tr id="Ontario">
+                    <td id="Ontariotd"> Ontario</td>
+                  </tr>
+                  <tr id="PEI">
+                    <td id="PEItd"> PEI</td>
+                  </tr>
+                  <tr id="Quebec">
+                    <td id="Quebectd"> Quebec</td>
+                  </tr>
+                  <tr id="Repatriated">
+                    <td id="Repatriatedtd"> Repatriated</td>
+                  </tr>
+                  <tr id="Saskatchewan">
+                    <td id="Saskatchewantd"> Saskatchewan</td>
+                  </tr>
+                  <tr id="Yukon">
+                    <td id="Yukontd"> Yukon</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+
+        <div id="australiacontainer" class="container--wrap bg-navy-4 table-container col">
+          <div class="sorted-table">
+            <h1 style="color:#d5d8de;"> <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Flag_of_Australia.svg" style="width:80px;position:relative;margin-left:5px;"> Australia</h1>
+            <div id="australiaTableDiv">
+              <table id="australiaTable" class="table table-striped table-dark table-condensed">
+                <thead>
+                  <tr id="australiaTableHeader">
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr id="austotal1">
+                    <td> Australia(Total)</td>
+                  </tr>
+                  <tr id="capital">
+                    <td id="capitaltd"> Australian Capital Territory</td>
+                  </tr>
+                  <tr id="southWales">
+                    <td id="southWalestd"> New South Wales</td>
+                  </tr>
+                  <tr id="Northern Territory">
+                    <td id="Northern Territorytd"> Northern Territory</td>
+                  </tr>
+                  <tr id="Queensland">
+                    <td id="Queenslandtd"> Queensland</td>
+                  </tr>
+                  <tr id="South Australia">
+                    <td id="South Australiatd"> South Australia</td>
+                  </tr>
+                  <tr id="Tasmania">
+                    <td id="Tasmaniatd"> Tasmania</td>
+                  </tr>
+                  <tr id="Victoria">
+                    <td id="Victoriatd"> Victoria</td>
+                  </tr>
+                  <tr id="Western Australia">
+                    <td id="Western Australiatd"> Western Australia</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</head>
+<script>
+//$('#canadacontainer').appendTo('#recallme');
+var d = new Date();
+var n = d.getTime();
+function verify(input) {
+        if (input == null || input == NaN || input.length == 0) {
+          return 0;
+        } else {
+          return input;
+        }
+      }
+var globalIP; //contains globalIP
+var countriesjson = null;
+var italy;
+var italytotal = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+var ausCan1 = null;
+var ausCan2 = null;
+var ausCan3 = null;
+var usaholder1;
+var usaholder2;
+var austotal = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+var cantotal = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+var usatotal = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+var usatotaljson = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+var braziltotal;
+var paktotal = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+var pakdata=null;
+var sindhdata=null;
+var punjabdata=null;
+var punjabolddata=null;
+var kpkdata=null;
+function bahubali() {
+  if ($(window).width() > 768) {
+    return 4
+  }
+}
+
+function bahubali2() {
+  if ($(window).width() > 768) {
+    return 6
+  }
+}
+//big function
+//this function has to decide what div to place on top.
+//it has to decide what country cases on firstdiv;
+jQuery.extend(jQuery.fn.dataTableExt.oSort, {
+  "formatted-num-pre": function(a) {
+    // console.log(a);
+    if (a.indexOf("(") != -1) {
+      var damnindex = a.indexOf("(");
+      a = a.substring(0, damnindex);
+    }
+    a = (a === "-" || a === "") ? 0 : a.replace(/[^\d\-\.]/g, "");
+    return parseFloat(a);
+  },
+
+  "formatted-num-asc": function(a, b) {
+    return a - b;
+  },
+
+  "formatted-num-desc": function(a, b) {
+    return b - a;
+  }
+});
+
+function totalbycountry(country) {
+var jadu=0;
+  for (var i = 0; i < countriesjson.length; i++) {
+  jadu++;
+    if (country.indexOf("Pakista") != -1 && countriesjson[i].country.indexOf("Pakistan") != -1 || country.indexOf("PK") != -1) {
+      addtotop(countriesjson[i], "color:#67cc02");
+      break;
+    }
+  }
+  if(jadu==countriesjson.length){addtotop(countriesjson[0],"color:lightblue")}
+}
+
+
+function addtotop(input, countrycolor) {
+  function addelement(id, what, type, style) {
+    var curr = document.getElementById(id);
+    var element = document.createElement(type);
+    var node = document.createTextNode(what);
+    element.appendChild(node);
+    element.setAttribute("style", style);
+    curr.appendChild(element);
+
+  }
+  addelement("Country", "HomeLand", "p", "font-size:20px;position:relative;left:0px;padding:0px;margin:0px;");
+  addelement("Country", input.country, "p", "font-size:40px;position:relative;left:0px;padding:0px;margin:0px;top:-15px;" + countrycolor);
+  addelement("confirmed", "Confirmed Cases", "p", "font-size:20px;position:relative;left:0px;padding:0px;margin:0px;top:7px;");
+  addelement("confirmed", addcomma(input.cases), "p", "font-size:40px;color:#02cc7b;position:relative;padding:0px;margin:0px;bottom:5px;margin-bottom:20px;");
+  addelement("deaths", "Deaths", "p", "font-size:20px;position:relative;left:0px;padding:0px;margin:0px;top:7px;");
+  addelement("deaths", addcomma(input.deaths), "p", "font-size:40px;color:#ff4000;position:relative;padding:0px;margin:0px;bottom:5px;margin-bottom:20px;");
+  addelement("newCases", "New Cases", "p", "font-size:20px;position:relative;left:30px;top:13px;padding:0px;margin:auto;text-align:left;");
+  addelement("newCases", addcomma(input.todayCases), "p", "font-size:40px;position:relative;color:#02cc7b;left:30px;padding:0px;margin:0px;text-align:left")
+
+  if(parseInt(input.todayDeaths)<1000){
+  addelement("newDeaths", "New Deaths", "p", "font-size:20px;position:relative;left:-30px;padding:0px;top:13px;margin:0px;text-align:right;");
+  addelement("newDeaths", addcomma(input.todayDeaths), "p", "font-size:40px;position:relative;left:-55px;padding:0px;margin:0px;text-align:right;color:#ff4000;")}
+  else{addelement("newDeaths", "New Deaths", "p", "font-size:20px;position:relative;left:-20px;padding:0px;top:13px;margin:0px;text-align:right;");
+  addelement("newDeaths", addcomma(input.todayDeaths), "p", "font-size:40px;position:relative;left:-10px;padding:0px;margin:0px;text-align:right;color:#ff4000;")}
+  addelement("Recovered", "Recovered", "p", "font-size:20px;position:relative;left:0px;padding:0px;margin:0px;top:7px;");
+  addelement("Recovered", addcomma(input.recovered), "p", "font-size:40px;color:#00aeff;position:relative;padding:0px;margin:0px;bottom:5px;margin-bottom:15px;");
+
+  addelement("Active", "Active", "p", "font-size:20px;position:relative;left:40px;top:13px;padding:0px;margin:auto;text-align:left;");
+  addelement("Active", addcomma(input.active), "p", "font-size:30px;position:relative;color:orange;left:30px;padding:0px;margin:0px;text-align:left")
+  addelement("Critical", "Critical", "p", "font-size:20px;position:relative;left:-40px;padding:0px;top:13px;margin:0px;text-align:right;");
+  addelement("Critical", addcomma(input.critical), "p", "font-size:30px;position:relative;left:-35px;padding:0px;margin:0px;text-align:right;color:Yellow;")
+
+
+}
+$.when(globaljson(), returnip()).done(function(a1, a2) {
+  totalbycountry(globalIP.country_name);
+  //console.log(globalIP.country_name);
+});
+
+function globaljson() {
+  return $.ajax({
+    type: "GET",
+    url: "https://raw.githubusercontent.com/amantalreja/pakcovid/refs/heads/main/countries.json",
+    dataType: "json",
+    success: function(data) {
+      countriesjson = data;
+    },
+  });
+}
+
+function returnip() {
+  return $.ajax({
+    type: "GET",
+    url: "http://api.ipstack.com/182.189.249.167?access_key=59b99bf427b89d40de8b7237f4406123&format=1",
+    success: function(data) {
+      globalIP = { country_name: "Pakistan" };
+    },
+    error: function() {
+      globalIP = { country_name: "Pakistan" };
+    }
+  });
+}
+
+
+
+
+
+
+function addintd(id, row) {
+  // var cc = Math.round
+  var chutu = (parseInt(row[14]) + parseInt(row[13]));
+  var number = " (" + ((row[13] / chutu) * 100).toFixed(2) + "%)";
+  var boss = document.getElementById(id);
+  var child = document.createElement("span");
+  var node = document.createTextNode(number);
+  child.setAttribute("style", "color:#66c706");
+  child.appendChild(node);
+  boss.appendChild(child);
+}
+
+function addintdd(id, deaths, recovered) {
+  var num = "(" + ((recovered / (parseInt(recovered) + parseInt(deaths))) * 100).toFixed(2) + "%)";
+  var boss = document.getElementById(id);
+  var child = document.createElement("span");
+  var node = document.createTextNode(" " + num);
+  child.setAttribute("style", "color:#66c706");
+  child.appendChild(node);
+  boss.appendChild(child);
+}
+function addintddd(id, active) {
+//  var num = "(" + ((recovered / (parseInt(recovered) + parseInt(deaths))) * 100).toFixed(2) + "%)";
+  var boss = document.getElementById(id);
+  var child = document.createElement("span");
+  var node = document.createTextNode(" " + active);
+  child.setAttribute("style", "color:orange");
+  child.appendChild(node);
+  boss.appendChild(child);
+}
+function addcell(id, number, color, yes, Ocheck) {
+  var trying = 0;
+  number = number.toString();
+
+  if ($(window).width() < 768) {
+    if (color.indexOf("ff7b0") != -1) {
+      color = "color:#fc3f19";
+    }
+  }
+  if (yes == 1) {
+    trying = number;
+  } else if (number.length > 5 && number.length < 7) {
+    trying = number.substring(0, 3) + "," + number.substring(3, 6);
+  } else if (number.length > 4 && number.length < 6) {
+    trying = number.substring(0, 2) + "," + number.substring(2, number.length);
+  } else if (number.length < 5 && number.length > 3) {
+    trying = number.substring(0, 1) + "," + number.substring(1, number.length);
+  } else {
+    trying = number;
+  }
+  var main = document.getElementById(id);
+  var element1 = document.createElement("td");
+  if (Ocheck == 1 && parseInt(trying) == 0) {
+    trying = "";
+  }
+  if(trying.indexOf("(")!=-1&&trying.indexOf(" (")==-1){
+  var index=trying.indexOf("(");
+  trying= trying.substring(0,index)+" "+trying.substring(index,trying.length);
+  }
+  var node = document.createTextNode(trying);
+  element1.appendChild(node);
+  element1.setAttribute("style", color);
+  main.appendChild(element1);
+  if (number.indexOf("↑") != -1 ) {
+    element1.setAttribute("class", "nowrap");
+  }
+}
+
+function addCellHeader(id, number, color) {
+  var main = document.getElementById(id);
+  var element1 = document.createElement("th");
+  var node = document.createTextNode(number);
+  element1.appendChild(node);
+  element1.setAttribute("style", color);
+  main.appendChild(element1);
+
+}
+
+function addcomma(input1) {
+  return input1.toLocaleString();
+}
+
+function rowarray(alldata) {
+  return alldata.split(/\r?\n|\r/);
+}
+
+function cellarray(onerow) {
+  return onerow.split(",");
+}
+
+$.when(returnip()).done(function(a1) {
+  if (globalIP.country_name.indexOf("Pakistan") == -1) {
+    function italyajax() {
+      $.ajax({
+        type: "GET",
+        url: "https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-regioni/dpc-covid19-ita-regioni.csv",
+        dataType: "text",
+        success: function(data) {
+          italycreator(data);
+          if ($(window).width() < 768) {
+            var table = document.getElementById("example");
+            table.setAttribute("style", "font-size:14px; font-weight:bold;height:100px!Important;");
+            var myfirsttable = document.getElementById("italycontainer");
+          }
+        },
+      });
+    }
+    italyajax();
+
+    function cssegiCases() {
+      return $.ajax({
+        type: "GET",
+        url: "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv",
+        dataType: "text",
+        success: function(data) {
+          ausCan1 = data;
+        },
+      });
+    }
+
+    function cssegiDeaths() {
+      return $.ajax({
+        type: "GET",
+        url: "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv",
+        dataType: "text",
+        success: function(data) {
+          ausCan2 = data;
+        },
+      });
+    }
+
+    function cssegiRecovered() {
+      return $.ajax({
+        type: "GET",
+        url: "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_recovered_global.csv",
+        dataType: "text",
+        success: function(data) {
+          ausCan3 = data;
+        },
+      });
+    }
+    $.when(cssegiCases(), cssegiDeaths(), cssegiRecovered()).done(function(a1, a2, a3) {
+      australiaCreator(ausCan1, ausCan2, ausCan3);
+      document.getElementById("australiacontainer").setAttribute("style", "display:block;")
+      if ($(window).width() < 768) {
+        var table = document.getElementById("australiaTable");
+        table.setAttribute("style", "font-size:14px; font-weight:bold;height:100px!Important;");
+        var f = new Date();
+        var z = f.getTime();
+        console.log(n);
+        console.log(z);
+      }
+    });
+
+    function australiaCreator(cases, deaths, recovered) {
+      var allrows = rowarray(cases);
+      var alldeaths = rowarray(deaths);
+      var allrecovered = rowarray(recovered);
+      var capital = cellarray(allrows[9]);
+      var southWales = cellarray(allrows[10]);
+      var nothern = cellarray(allrows[11]);
+      var queensland = cellarray(allrows[12]);
+      var south = cellarray(allrows[13]);
+      var tasmania = cellarray(allrows[14]);
+      var victoria = cellarray(allrows[15]);
+      var Western = cellarray(allrows[16]);
+      if ($(window).width() < 768) {
+        addCellHeader("australiaTableHeader", "Region & Active Cases", "color:white")
+        addCellHeader("australiaTableHeader", "Total Cases", "color:white");
+        addCellHeader("australiaTableHeader", "Deaths", "color:white");
+        addCellHeader("australiaTableHeader", "Recovered", "color:white");
+      }
+      if ($(window).width() > 768) {
+        addCellHeader("australiaTableHeader", "Region & Recovery Rate", "color:white")
+        addCellHeader("australiaTableHeader", "Total Cases", "color:white");
+        addCellHeader("australiaTableHeader", "New Cases", "color:white");
+        addCellHeader("australiaTableHeader", "Deaths", "color:white");
+        addCellHeader("australiaTableHeader", "Changes", "color:white")
+        addCellHeader("australiaTableHeader", "Recovered", "color:white");
+        addCellHeader("australiaTableHeader", "Changes", "color:white");
+        addCellHeader("australiaTableHeader", "Active", "color:white");
+
+      }
+
+      addrow("capital", capital, cellarray(alldeaths[9]), cellarray(allrecovered[9]));
+      addrow("southWales", southWales, cellarray(alldeaths[10]), cellarray(allrecovered[10]));
+      addrow("Northern Territory", nothern, cellarray(alldeaths[11]), cellarray(allrecovered[11]));
+      //  console.log(allrecovered[11]);
+      addrow("Queensland", queensland, cellarray(alldeaths[12]), cellarray(allrecovered[12]));
+      addrow("South Australia", south, cellarray(alldeaths[13]), cellarray(allrecovered[13]));
+      addrow("Tasmania", tasmania, cellarray(alldeaths[14]), cellarray(allrecovered[14]))
+      addrow("Victoria", victoria, cellarray(alldeaths[15]), cellarray(allrecovered[15]));
+      addrow("Western Australia", Western, cellarray(alldeaths[16]), cellarray(allrecovered[16]));
+      //addrow("Alberta",cellarray(allrows[36]),cellarray(alldeaths[36]),cellarray(allrecovered[36]));
+      if ($(window).width() < 768) {
+
+        addcell("austotal1", addcomma(parseInt(austotal[1])) + "(+" + austotal[2] + ")", "color:#02c94b;");
+        // addcell("austotal1", austotal[2], "color:#02c94b;");
+        addcell("austotal1", austotal[3], "color:#ff7b00;");
+        addcell("austotal1", austotal[5], "color:#00aeff;");
+
+      addintddd("capitaltd","("+addcomma(parseInt(returncell(capital, 1))-parseInt(returncell(cellarray(alldeaths[9]), 1))-parseInt(returncell(cellarray(allrecovered[9]), 1)))+")");
+      addintddd("southWalestd","("+addcomma(parseInt(returncell(southWales, 1))-parseInt(returncell(cellarray(alldeaths[10]), 1))-parseInt(returncell(cellarray(allrecovered[10]), 1)))+")");
+      addintddd("Northern Territorytd","("+addcomma(parseInt(returncell(nothern, 1))-parseInt(returncell(cellarray(alldeaths[11]), 1))-parseInt(returncell(cellarray(allrecovered[11]), 1)))+")");
+      addintddd("Queenslandtd","("+addcomma(parseInt(returncell(queensland, 1))-parseInt(returncell(cellarray(alldeaths[12]), 1))-parseInt(returncell(cellarray(allrecovered[12]), 1)))+")");
+      addintddd("South Australiatd","("+addcomma(parseInt(returncell(south, 1))-parseInt(returncell(cellarray(alldeaths[13]), 1))-parseInt(returncell(cellarray(allrecovered[13]), 1)))+")");
+      addintddd("Tasmaniatd","("+addcomma(parseInt(returncell(tasmania, 1))-parseInt(returncell(cellarray(alldeaths[14]), 1))-parseInt(returncell(cellarray(allrecovered[14]), 1)))+")");
+      addintddd("Victoriatd","("+addcomma(parseInt(returncell(victoria, 1))-parseInt(returncell(cellarray(alldeaths[15]), 1))-parseInt(returncell(cellarray(allrecovered[15]), 1)))+")");
+      addintddd("Western Australiatd","("+addcomma(parseInt(returncell(Western, 1))-parseInt(returncell(cellarray(alldeaths[16]), 1))-parseInt(returncell(cellarray(allrecovered[16]), 1)))+")");
+      }
+      //  console.log(returncell(cellarray(allrecovered[11]), 1));
+      if ($(window).width() > 768) {
+      addintdd("capitaltd", parseInt(returncell(cellarray(alldeaths[9]), 1)), parseInt(returncell(cellarray(allrecovered[9]), 1)));
+      addintdd("southWalestd", parseInt(returncell(cellarray(alldeaths[10]), 1)), parseInt(returncell(cellarray(allrecovered[10]), 1)));
+      addintdd("Northern Territorytd", parseInt(returncell(cellarray(alldeaths[11]), 1)), parseInt(returncell(cellarray(allrecovered[11]), 1)));
+      addintdd("Queenslandtd", parseInt(returncell(cellarray(alldeaths[12]), 1)), parseInt(returncell(cellarray(allrecovered[12]), 1)));
+      addintdd("South Australiatd", parseInt(returncell(cellarray(alldeaths[13]), 1)), parseInt(returncell(cellarray(allrecovered[13]), 1)));
+      addintdd("Tasmaniatd", parseInt(returncell(cellarray(alldeaths[14]), 1)), parseInt(returncell(cellarray(allrecovered[14]), 1)));
+      addintdd("Victoriatd", parseInt(returncell(cellarray(alldeaths[15]), 1)), parseInt(returncell(cellarray(allrecovered[15]), 1)));
+      addintdd("Western Australiatd", parseInt(returncell(cellarray(alldeaths[16]), 1)), parseInt(returncell(cellarray(allrecovered[16]), 1)));
+
+        addcell("austotal1", austotal[1], "color:#02c94b;");
+        addcell("austotal1", austotal[2], "color:#02c94b;");
+        addcell("austotal1", austotal[3], "color:#ff7b00;");
+        addcell("austotal1", austotal[4], "color:#ff5805;");
+        addcell("austotal1", austotal[5], "color:#00aeff;");
+        addcell("austotal1", austotal[6], "color:#00aeff;");
+        addcell("austotal1", austotal[7], "color:yellow;");
+      }
+
+      function returncell(input, type) {
+        var lastcell = null;
+        var othercell = null;
+        var myarray = input;
+        for (i = myarray.length; i > myarray.length - 20; i--) {
+          if (input[i] != undefined && input[i] != null && lastcell == null) {
+            lastcell = input[i];
+            othercell = input[i - 1];
+            if (type == 1) {
+              return lastcell;
+            } else {
+              return othercell;
+            }
+          }
+        }
+      }
+
+      function addrow(id, caseRow, deathRow, recoveredRow) {
+        var idk = 1;
+        austotal[1] = austotal[1] + parseInt(returncell(caseRow, 1));
+        var temp = parseInt(returncell(caseRow, 1));
+        var temp2 = parseInt(returncell(caseRow, 0));
+        var cc = ((((temp - temp2) / temp2 + 0.00001) * 100)).toFixed(2);
+        austotal[2] = austotal[2] + temp - temp2;
+        var temp3 = parseInt(returncell(deathRow, 1));
+        var temp4 = parseInt(returncell(deathRow, 0));
+        var ccc = ((((temp3 - temp4) / temp4) * 100)).toFixed(2);
+        austotal[3] = austotal[3] + temp3;
+        var colorchecker = "color:#02c94b";
+        if (temp - temp2 > (0.01 * temp) || (temp - temp2) > 200) {
+          colorchecker = "background-color:red;color:white;"
+        }
+
+        var temp5 = parseInt(returncell(recoveredRow, 1));
+        austotal[5] = austotal[5] + temp5;
+        if ($(window).width() < 768) {
+          addcell(id, addcomma(parseInt(returncell(caseRow, 1))) + "(+" + (temp - temp2) + ")", "color:#02c94b", 1);
+          addcell(id, temp3, "color:#ff7b00");
+          addcell(id, returncell(recoveredRow, 1), "color:#00aeff");
+        }
+        if ($(window).width() > 768) {
+          addcell(id, returncell(caseRow, 1), "color:#02c94b");
+          addcell(id, "↑ " + (temp - temp2) + "(" + cc + "%)", colorchecker, 1);
+          addcell(id, temp3, "color:#ff7b00");
+          austotal[4] = austotal[4] + temp3 - temp4;
+          var colorchecker = "color:#ff5805";
+          if ((temp3 - temp4) > (0.005 * temp3) || temp4 - temp4 > 30) {
+            colorchecker = "color:white;background:red;"
+          }
+          addcell(id, "↑ " + (temp3 - temp4) + "(" + ccc + "%)", colorchecker, 1);
+
+          //austotal[4]=austotal[4]+
+          var temp6 = parseInt(returncell(recoveredRow, 0));
+
+          austotal[6] = austotal[6] + temp5 - temp6;
+          addcell(id, returncell(recoveredRow, 1), "color:#00aeff");
+          var cf = ((((temp5 - temp6) / temp6 + 0.00001) * 100)).toFixed(2);
+
+          addcell(id, "↑ " + (temp5 - temp6) + "(" + cf + "%)", "color:#00aeff", 1);
+          addcell(id, (temp - temp3 - temp5) + " ", "color:yellow");
+          austotal[7] = austotal[7] + temp - temp3 - temp5;
+        }
+      }
+      $(document).ready(function() {
+        $('#australiaTable').DataTable({
+          "bPaginate": true,
+          "bLengthChange": false,
+          "bFilter": true,
+          columnDefs: [{
+            type: 'formatted-num',
+            targets: [1, 2, bahubali(), bahubali2()]
+          }],
+          "bInfo": false,
+          "order": [
+            [1, "desc"]
+          ],
+          "bAutoWidth": false
+        });
+
+      });
+
+    }
+
+    function italycreator(data) {
+      // [3]= region name;
+      //[14]= total deaths (region);
+      //[12]= new cases;
+      //[7]critical;
+      var allrow = rowarray(data);
+      var venetorow = null;
+      var venetoold = null;
+      var valleRow = null;
+      var valleOld = null;
+      var umbriaRow = null;
+      var umbriaOld = null;
+      var trentoRow = null;
+      var trentoOld = null;
+      var toscanaRow = null;
+      var toscanaOld = null;
+      var siciliaRow = null;
+      var siciliaOld = null;
+      var sardegnaRow = null;
+      var sardegnaOld = null;
+      var pugliaRow = null;
+      var pugliaOld = null;
+      var piemonteRow = null;
+      var piemonteOld = null;
+      var moliseRow = null;
+      var moliseOld = null;
+      var marcheRow = null;
+      var marcheOld = null;
+      var lombardiaRow = null;
+      var lombardiaOld = null;
+      var liguriaRow = null;
+      var liguriaOld = null;
+      var lazioRow = null;
+      var lazioOld = null;
+      var veneziaRow = null;
+      var veneziaOld = null;
+      var romagnaRow = null;
+      var romagnaOld = null;
+      var campaniaRow = null;
+      var campaniaOld = null;
+      var calabriaRow = null;
+      var calabriaOld = null;
+      var bolzanoRow = null;
+      var bolzanoOld = null;
+      var basilicataRow = null;
+      var basilicataOld = null;
+      var abruzzoRow = null;
+      var abruzzoOld = null;
+      for (var i = allrow.length - 1; i > allrow.length - 50; i--) {
+        var currentrow = cellarray(allrow[i]);
+        if (currentrow.length > 8) {
+          var regionName = currentrow[3];
+          if (regionName.indexOf("asilica") != -1 && basilicataRow == null) {
+            basilicataRow = currentrow;
+          }
+          if (regionName.indexOf("asilica") != -1 && basilicataRow != currentrow && basilicataOld == null) {
+            basilicataOld = currentrow
+          }
+          if (regionName.indexOf("bruzz") != -1 && abruzzoRow == null) {
+            abruzzoRow = currentrow;
+          }
+          if (regionName.indexOf("bruzz") != -1 && abruzzoRow != currentrow && abruzzoOld == null) {
+            abruzzoOld = currentrow;
+          }
+          if (regionName.indexOf("olzan") != -1 && bolzanoRow == null) {
+            bolzanoRow = currentrow;
+          }
+          if (regionName.indexOf("olzan") != -1 && bolzanoRow != currentrow && bolzanoOld == null) {
+            bolzanoOld = currentrow
+          }
+          if (regionName.indexOf("alabri") != -1 && calabriaRow == null) {
+            calabriaRow = currentrow;
+          }
+          if (regionName.indexOf("alabri") != -1 && calabriaRow != currentrow && calabriaOld == null) {
+            calabriaOld = currentrow;
+          }
+          if (regionName.indexOf("ampani") != -1 && campaniaRow == null) {
+            campaniaRow = currentrow;
+          }
+          if (regionName.indexOf("ampani") != -1 && campaniaRow != currentrow && campaniaOld == null) {
+            campaniaOld = currentrow;
+          }
+          if (regionName.indexOf("omagn") != -1 && romagnaRow == null) {
+            romagnaRow = currentrow;
+          }
+          if (regionName.indexOf("omagn") != -1 && romagnaRow != currentrow && romagnaOld == null) {
+            romagnaOld = currentrow;
+          }
+          if (regionName.indexOf("enezi") != -1 && veneziaRow == null) {
+            veneziaRow = currentrow
+          }
+          if (regionName.indexOf("enezi") != -1 && veneziaRow != currentrow && veneziaOld == null) {
+            veneziaOld = currentrow;
+          }
+          if (regionName.indexOf("azio") != -1 && lazioRow == null) {
+            lazioRow = currentrow;
+          }
+          if (regionName.indexOf("azio") != -1 && lazioRow != currentrow && lazioOld == null) {
+            lazioOld = currentrow;
+          }
+          if (regionName.indexOf("iguri") != -1 && liguriaRow == null) {
+            liguriaRow = currentrow;
+          }
+          if (regionName.indexOf("iguri") != -1 && liguriaRow != currentrow && liguriaOld == null) {
+            liguriaOld = currentrow;
+          }
+          if (regionName.indexOf("mbard") != -1 && lombardiaRow == null) {
+            lombardiaRow = currentrow;
+          }
+          if (regionName.indexOf("mbard") != -1 && lombardiaRow != currentrow && lombardiaOld == null) {
+            lombardiaOld = currentrow;
+          }
+          if (regionName.indexOf("arch") != -1 && marcheRow == null) {
+            marcheRow = currentrow;
+          }
+          if (regionName.indexOf("arch") != -1 && marcheRow != currentrow && marcheOld == null) {
+            marcheOld = currentrow
+          }
+          if (regionName.indexOf("olis") != -1 && moliseRow == null) {
+            moliseRow = currentrow;
+          }
+          if (regionName.indexOf("olis") != -1 && moliseRow != currentrow && moliseOld == null) {
+            moliseOld = currentrow;
+          }
+          if (regionName.indexOf("emont") != -1 && piemonteRow == null) {
+            piemonteRow = currentrow
+          }
+          if (regionName.indexOf("emont") != -1 && piemonteRow != currentrow && piemonteOld == null) {
+            piemonteOld = currentrow
+          }
+          if (regionName.indexOf("uglia") != -1 && pugliaRow == null) {
+            pugliaRow = currentrow;
+          }
+          if (regionName.indexOf("uglia") != -1 && pugliaRow != currentrow && pugliaOld == null) {
+            pugliaOld = currentrow;
+          }
+          if (regionName.indexOf("ardegn") != -1 && sardegnaRow == null) {
+            sardegnaRow = currentrow;
+          }
+          if (regionName.indexOf("ardegn") != -1 && sardegnaRow != currentrow && sardegnaOld == null) {
+            sardegnaOld = currentrow;
+          }
+          if (regionName.indexOf("icili") != -1 && siciliaRow == null) {
+            siciliaRow = currentrow;
+          }
+          if (regionName.indexOf("icili") != -1 && siciliaRow != currentrow && siciliaOld == null) {
+            siciliaOld = currentrow;
+          }
+          if (regionName.indexOf("oscan") != -1 && toscanaRow == null) {
+            toscanaRow = currentrow;
+          }
+          if (regionName.indexOf("oscan") != -1 && toscanaRow != currentrow && toscanaOld == null) {
+            toscanaOld = currentrow;
+          }
+          if (regionName.indexOf("rento") != -1 && trentoRow == null) {
+            trentoRow = currentrow;
+          }
+          if (regionName.indexOf("rento") != -1 && trentoRow != currentrow && trentoOld == null) {
+            trentoOld = currentrow;
+          }
+          if (regionName.indexOf("alle") != -1 && valleRow == null) {
+            valleRow = currentrow;
+          }
+          if (regionName.indexOf("alle") != -1 && valleOld == null && currentrow != valleRow) {
+            valleOld = currentrow;
+          }
+          if (regionName.indexOf("mbria") != -1 && umbriaRow == null) {
+            umbriaRow = currentrow;
+          }
+          if (regionName.indexOf("mbria") != -1 && umbriaRow != currentrow && umbriaOld == null) {
+            umbriaOld = currentrow
+          }
+          if (regionName.indexOf("eneto") != -1 && venetorow == null) {
+            venetorow = currentrow;
+          }
+          if (regionName.indexOf("eneto") != -1 && venetorow != currentrow && venetoold == null) {
+            venetoold = currentrow;
+          }
+
+        }
+      }
+      if ($(window).width() < 768) {
+        addCellHeader("italyheadrow", "Region & Active Cases", "color:white");
+        addCellHeader("italyheadrow", "Total Cases", "color:white");
+        addCellHeader("italyheadrow", "Deaths", "color:white");
+        addCellHeader("italyheadrow", "Recovered", "color:white");
+      }
+      if ($(window).width() > 768) {
+        addCellHeader("italyheadrow", "Region & Recovery Rate", "color:white");
+        addCellHeader("italyheadrow", "Total Cases", "color:white");
+        addCellHeader("italyheadrow", "New Cases", "color:white");
+        addCellHeader("italyheadrow", "Deaths", "color:white");
+        addCellHeader("italyheadrow", "Changes", "color:white");
+        addCellHeader("italyheadrow", "Recovered", "color:white");
+        addCellHeader("italyheadrow", "Hospitalized", "color:white");
+        addCellHeader("italyheadrow", "Critical", "color:white");
+      }
+
+      addrow("Abruzzo", abruzzoRow, abruzzoOld);
+      addrow("Basilicata", basilicataRow, basilicataOld);
+      addrow("Bolzano", bolzanoRow, bolzanoOld);
+      addrow("Calabria", calabriaRow, calabriaOld);
+      addrow("Campania", campaniaRow, campaniaOld);
+      addrow("Romagna", romagnaRow, romagnaOld);
+      addrow("Venezia", veneziaRow, veneziaOld);
+      addrow("Lazio", lazioRow, lazioOld);
+      addrow("Liguria", liguriaRow, liguriaOld);
+      addrow("Lombardia", lombardiaRow, lombardiaOld);
+      addrow("Marche", marcheRow, marcheOld);
+      addrow("Molise", moliseRow, moliseOld);
+      addrow("Piedmonte", piemonteRow, piemonteOld)
+      addrow("Puglia", pugliaRow, pugliaOld);
+      addrow("Sardegna", sardegnaRow, sardegnaOld);
+      addrow("Sicilia", siciliaRow, siciliaOld);
+      addrow("Toscana", toscanaRow, toscanaOld);
+      addrow("Trento", trentoRow, trentoOld);
+      addrow("Umbria", umbriaRow, umbriaOld);
+      addrow("Valle", valleRow, valleOld);
+      addrow("Veneto", venetorow, venetoold);
+      // console.log(italytotal);
+
+      var cc = ((italytotal[2] / italytotal[1]) * 100).toFixed(2);
+      var ccc = ((italytotal[4] / italytotal[3]) * 100).toFixed(2);
+
+
+      console.log(italytotal[1]);
+      console.log(italytotal[3]);
+      console.log(italytotal[5]);
+      var maal= addcomma(italytotal[1]-italytotal[3]-italytotal[5]);
+      addintddd("italytotaltd","(" +maal+ ")")
+      if ($(window).width() < 768) {
+        addcell("italytotal", addcomma(parseInt(italytotal[1])) + "(+" + addcomma(parseInt(italytotal[2])) + ")", "color:#02c94b");
+        addcell("italytotal", italytotal[3], "color:#ff7b00");
+        addcell("italytotal", italytotal[5], "color:#00aeff");
+      }
+      if ($(window).width() > 768) {
+        addcell("italytotal", italytotal[1], "color:#02c94b");
+        addcell("italytotal", "↑ " + italytotal[2] + "(" + cc + "%)", "color:#02c94b");
+        addcell("italytotal", italytotal[3], "color:#ff7b00");
+        addcell("italytotal", "↑ " + italytotal[4] + "(" + ccc + "%)", "color:#ff5805");
+        addcell("italytotal", italytotal[5], "color:#00aeff");
+        addcell("italytotal", italytotal[8], "color:orange");
+        addcell("italytotal", italytotal[9], "color:yellow");
+
+      }
+      // console.log(italytotal[1].toString().length)
+      $(document).ready(function() {
+        $('#example').DataTable({
+          "bPaginate": true,
+          "bLengthChange": false,
+          "bFilter": true,
+          columnDefs: [{
+            type: 'formatted-num',
+            targets: [1, 2, bahubali(), bahubali2()]
+          }],
+          "bInfo": false,
+          "order": [
+            [1, "desc"]
+          ],
+          "bAutoWidth": false
+        });
+
+      });
+      var italydiv = document.getElementById("italycontainer");
+      italydiv.setAttribute("style", "display:block !Important;");
+
+      function addrow(id, row, old) {
+        // var cc = Math.round(((row[14] - old[14]) / old[14] + 0.00001) * 100) / 100;
+        var ccc = (((row[12] / old[15]) * 100)).toFixed(2);
+
+        var cc = (((row[14] - old[14]) / old[14]) * 100).toFixed(2);
+
+        italytotal[1] = italytotal[1] + parseInt(row[15]);
+
+        italytotal[2] = italytotal[2] + parseInt(row[12]);
+
+        italytotal[3] = italytotal[3] + parseInt(row[14]);
+        italytotal[5] = italytotal[5] + parseInt(row[13]);
+        addintddd(id+"td","("+addcomma(row[15]-row[14]-row[13])+")")
+        if ($(window).width() < 768) {
+          addcell(id, addcomma(parseInt(row[15])) + "(+" + addcomma(parseInt(row[12])) + ")", "color:#02c94b");
+          addcell(id, row[14], "color:#ff7b00");
+          addcell(id, row[13], "color:#00aeff");
+        }
+        if ($(window).width() > 768) {
+          addcell(id, row[15], "color:#02c94b"); //positive
+          addcell(id, "↑ " + row[12] + "(" + ccc + "%)", "color:#02c94b");
+          addcell(id, row[14], "color:#ff7b00"); //deaths
+          addcell(id, "↑ " + (row[14] - old[14]) + "(" + cc + "%)", "color:#ff5805");
+
+          italytotal[4] = italytotal[4] + parseInt(row[14] - old[14]);
+          addcell(id, row[13], "color:#00aeff"); //recovered
+
+          addcell(id, row[8], "color:orange");
+          italytotal[8] = italytotal[8] + parseInt(row[8]);
+          addcell(id, row[7], "color:yellow");
+          italytotal[9] = italytotal[9] + parseInt(row[7]);
+        }
+      }
+
+    }
+
+    function canadaberry() {
+      return $.ajax({
+        type: "GET",
+        url: "https://raw.githubusercontent.com/ishaberry/Covid19Canada/master/timeseries_prov/active_timeseries_prov.csv",
+        dataType: "text",
+        success: function(data) {
+          canadacreator(data);
+          if ($(window).width() < 768) {
+            var table = document.getElementById("canadaTable");
+            table.setAttribute("style", "font-size:14px; font-weight:bold;height:100px!Important;");
+          }
+          //  console.log(rowarray(data).length);
+        },
+      });
+    }
+    canadaberry();
+
+    function canadacreator(data) {
+      var allrows = rowarray(data);
+      var AlbertaNew = null;
+      var AlbertaOld = null;
+      var BCNew = null;
+      var BCOld = null;
+      var ManitobaNew = null;
+      var ManitobaOld = null;
+      var NewBrunswickNew = null
+      var NewBrunswickOld = null;
+      var NLNew = null;
+      var NLOld = null;
+      var NovaNew = null;
+      var NovaOld = null;
+      var NunavutNew = null;
+      var NunavutOld = null;
+      var NWTNew = null;
+      var NWTOld = null;
+      var OntarioNew = null;
+      var OntarioOld = null;
+      var PEINew = null;
+      var PEIOld = null;
+      var QuebecNew = null;
+      var QuebecOld = null;
+      var RepatriatedNew = null;
+      var RepatriatedOld = null;
+      var SaskatchewanNew = null;
+      var SaskatchewanOld = null;
+      var YukonNew = null;
+      var YukonOld = null;
+      if ($(window).width() < 768) {
+        addCellHeader("canadaTableHeader", "Region & Active Cases", "color:white")
+        addCellHeader("canadaTableHeader", "Total Cases", "color:white");
+        addCellHeader("canadaTableHeader", "Deaths", "color:white");
+        addCellHeader("canadaTableHeader", "Recovered", "color:white");
+      }
+      if ($(window).width() > 768) {
+        addCellHeader("canadaTableHeader", "Region & Recovery Rate", "color:white")
+        addCellHeader("canadaTableHeader", "Total Cases", "color:white");
+        addCellHeader("canadaTableHeader", "Changes", "color:white");
+        addCellHeader("canadaTableHeader", "Deaths", "color:white");
+        addCellHeader("canadaTableHeader", "Changes", "color:white")
+        addCellHeader("canadaTableHeader", "Recovered", "color:white");
+        addCellHeader("canadaTableHeader", "Changes", "color:white");
+        addCellHeader("canadaTableHeader", "Active", "color:white");
+      }
+      for (i = allrows.length - 1; i > 0; i--) {
+        var currentrow = cellarray(allrows[i]);
+        if (currentrow.length > 2) {
+          var region = currentrow[0];
+          if (AlbertaNew == null && region.indexOf("berta") != -1) {
+            AlbertaNew = currentrow;
+          }
+          if (AlbertaNew != currentrow && region.indexOf("berta") != -1 && AlbertaOld == null) {
+            AlbertaOld = currentrow;
+          }
+          if (BCNew == null && region.indexOf("BC") != -1) {
+            BCNew = currentrow;
+          }
+          if (BCNew != currentrow && region.indexOf("BC") != -1 && BCOld == null) {
+            BCOld = currentrow;
+          }
+          if (ManitobaNew == null && region.indexOf("anitob") != -1) {
+            ManitobaNew = currentrow;
+          }
+          if (ManitobaNew != currentrow && region.indexOf("anitob") != -1 && ManitobaOld == null) {
+            ManitobaOld = currentrow;
+          }
+          if (NewBrunswickNew == null && region.indexOf("runswick") != -1) {
+            NewBrunswickNew = currentrow;
+          }
+          if (NewBrunswickNew != currentrow && region.indexOf("runswick") != -1 && NewBrunswickOld == null) {
+            NewBrunswickOld = currentrow;
+          }
+          if (NLNew == null && region.indexOf("NL") != -1) {
+            NLNew = currentrow;
+          }
+          if (NLNew != currentrow && region.indexOf("NL") != -1 && NLOld == null) {
+            NLOld = currentrow;
+          }
+          if (NovaNew == null && region.indexOf("cotia") != -1) {
+            NovaNew = currentrow;
+          }
+          if (NovaNew != currentrow && region.indexOf("cotia") != -1 && NovaOld == null) {
+            NovaOld = currentrow;
+          }
+          if (NunavutNew == null && region.indexOf("unavu") != -1) {
+            NunavutNew = currentrow;
+          }
+          if (NunavutNew != currentrow && region.indexOf("unavu") != -1 && NunavutOld == null) {
+            NunavutOld = currentrow;
+          }
+          if (NWTNew == null && region.indexOf("NWT") != -1) {
+            NWTNew = currentrow;
+          }
+          if (NWTNew != currentrow && region.indexOf("NWT") != -1 && NWTOld == null) {
+            NWTOld = currentrow;
+          }
+          if (OntarioNew == null && region.indexOf("ntari") != -1) {
+            OntarioNew = currentrow;
+          }
+          if (OntarioNew != currentrow && region.indexOf("ntario") != -1 && OntarioOld == null) {
+            OntarioOld = currentrow;
+          }
+          if (PEINew == null && region.indexOf("PEI") != -1) {
+            PEINew = currentrow;
+          }
+          if (PEINew != currentrow && region.indexOf("PEI") != -1 && PEIOld == null) {
+            PEIOld = currentrow;
+          }
+          if (QuebecNew == null && region.indexOf("uebe") != -1) {
+            QuebecNew = currentrow;
+          }
+          if (QuebecNew != currentrow && region.indexOf("uebe") != -1 && QuebecOld == null) {
+            QuebecOld = currentrow;
+          }
+          if (RepatriatedNew == null && region.indexOf("patriate") != -1) {
+            RepatriatedNew = currentrow;
+          }
+          if (RepatriatedNew != currentrow && region.indexOf("patriate") != -1 && RepatriatedOld == null) {
+            RepatriatedOld = currentrow;
+          }
+          if (SaskatchewanNew == null && region.indexOf("askatchew") != -1) {
+            SaskatchewanNew = currentrow;
+          }
+          if (SaskatchewanNew != currentrow && region.indexOf("skatchewa") != -1 && SaskatchewanOld == null) {
+            SaskatchewanOld = currentrow;
+          }
+          if (YukonNew == null && region.indexOf("ukon") != -1) {
+            YukonNew = currentrow;
+          }
+          if (YukonNew != currentrow && region.indexOf("ukon") != -1 && YukonOld == null) {
+            YukonOld = currentrow;
+          }
+        }
+      }
+      addrow("Alberta", AlbertaNew, AlbertaOld, "Albertatd");
+      addrow("BC", BCNew, BCOld, "BCtd");
+      addrow("Manitoba", ManitobaNew, ManitobaOld, "Manitobatd");
+      addrow("NewBrunswick", NewBrunswickNew, NewBrunswickOld, "NewBrunswicktd");
+      addrow("NL", NLNew, NLOld, "NLtd");
+      addrow("Nova", NovaNew, NovaOld, "Novatd");
+      addrow("Nunavut", NunavutNew, NunavutOld, "Nunavuttd");
+      addrow("NWT", NWTNew, NWTOld, "NWTtd");
+      addrow("Ontario", OntarioNew, OntarioOld, "Ontariotd");
+      addrow("PEI", PEINew, PEIOld, "PEItd");
+      addrow("Quebec", QuebecNew, QuebecOld, "Quebectd");
+      addrow("Repatriated", RepatriatedNew, RepatriatedOld, "Repatriatedtd");
+      addrow("Saskatchewan", SaskatchewanNew, SaskatchewanOld, "Saskatchewantd");
+      addrow("Yukon", YukonNew, YukonOld, "Yukontd");
+      //country row
+      var temp2 = ((cantotal[6] / cantotal[5]) * 100).toFixed(2);
+      var temp1 = ((cantotal[4] / cantotal[3] * 100)).toFixed(2);
+      if ($(window).width() < 768) {
+        addcell("cantotal", addcomma(cantotal[1]) + "(+" + cantotal[2] + ")", "color:#02c94b;")
+        addcell("cantotal", cantotal[3], "color:#ff7b00;");
+        addcell("cantotal", cantotal[5], "color:#00aeff;");
+      }
+      var temp = ((cantotal[2] / (cantotal[1] - cantotal[2])) * 100).toFixed(2);
+      if ($(window).width() > 768) {
+        addcell("cantotal", cantotal[1], "color:#02c94b;")
+        addcell("cantotal", addcomma(cantotal[2]) + "↑(" + temp + "%)", "color:#02c94b");
+        addcell("cantotal", cantotal[3], "color:#ff7b00;");
+        addcell("cantotal", "↑" + cantotal[4] + "(" + temp1 + "%)", "color:#ff5805")
+        addcell("cantotal", cantotal[5], "color:#00aeff;");
+        addcell("cantotal", "↑" + cantotal[6] + "(" + temp2 + "%)", "color:#826dfc");
+        addcell("cantotal", cantotal[7], "color:yellow");
+      }
+      //
+      function addrow(id, New, Old, td) {
+        var positive = parseInt(New[2]);
+        cantotal[1] = cantotal[1] + positive;
+        var pchange = parseInt(New[2]) - parseInt(Old[2]);
+
+        if (pchange < 0) {
+          pchange = 0;
+        }
+        cantotal[2] = cantotal[2] + pchange;
+        var deaths = parseInt(New[4]);
+        var dchange = parseInt(New[4]) - parseInt(Old[4]);
+        if (dchange < 0) {
+          dchange = 0;
+        }
+        cantotal[3] = cantotal[3] + deaths;
+        cantotal[4] = cantotal[4] + dchange;
+        var recovered = parseInt(New[3]);
+        cantotal[5] = cantotal[5] + recovered;
+        var rchange = parseInt(New[3]) - parseInt(Old[3]);
+        if (rchange < 0) {
+          rchange = 0;
+        }
+        cantotal[6] = cantotal[6] + rchange;
+
+
+        var pchangep = ((pchange / positive) * 100).toFixed(2);
+
+        if ($(window).width() < 768) {
+        if (td != undefined) {
+          addintddd(td,"("+addcomma(positive-deaths-recovered)+")");
+        }
+          addcell(id, addcomma(positive) + "(+" + addcomma(pchange) + ")", "color:#02c94b", 1);
+          addcell(id, deaths, "color:#ff7b00;");
+          addcell(id, recovered, "color:#00aeff;")
+        }
+        if ($(window).width() > 768) { //MAIN
+        if (td != undefined) {
+          addintdd(td, deaths, recovered);
+        }
+          var dchangep = ((dchange / deaths) * 100).toFixed(2);
+          var rchangep = ((rchange / recovered) * 100).toFixed(2);
+          addcell(id, positive, "color:#02c94b");
+          addcell(id, "↑ " + pchange + "(" + pchangep + "%)", "color:#02c94b;");
+          addcell(id, deaths, "color:#ff7b00;");
+          addcell(id, "↑ " + dchange + "(" + dchangep + "%)", "color:#ff5805");
+          addcell(id, recovered, "color:#00aeff;") //blue
+          addcell(id, "↑ " + rchange + "(" + rchangep + "%)", "color:#826dfc");
+          addcell(id, positive - deaths - recovered, "color:yellow");
+          cantotal[7] = cantotal[7] + positive - deaths - recovered;
+        }
+      }
+      $(document).ready(function() {
+        $('#canadaTable').DataTable({
+          "bPaginate": true,
+          "bLengthChange": false,
+          "bFilter": true,
+          "bInfo": false,
+          columnDefs: [{
+            type: 'formatted-num',
+            targets: [1, 2, bahubali(), bahubali2()]
+          }],
+          "order": [
+            [1, "desc"]
+          ],
+          "bAutoWidth": false
+        });
+
+      });
+      document.getElementById("canadacontainer").setAttribute("style", "display:block");
+    }
+
+    function americatracker() {
+      return $.ajax({
+        type: "GET",
+        url: "https://covidtracking.com/api/v1/states/current.csv",
+        dataType: "text",
+        success: function(data) {
+          usaholder1 = data;
+        }
+      });
+    }
+
+    function americatracker2() {
+      return $.ajax({
+        type: "GET",
+        url: "https://raw.githubusercontent.com/nytimes/covid-19-data/master/live/us-states.csv",
+        dataType: "text",
+        success: function(data) {
+          usaholder2 = data;
+        }
+      });
+    }
+    americatracker();
+    $.when(americatracker(), americatracker2(), globaljson()).done(function(a1, a2, a3) {
+      americacreator(usaholder1, usaholder2, countriesjson);
+      document.getElementById("americacontainer").setAttribute("style", "display:block;")
+      if ($(window).width() < 768) {
+        var table = document.getElementById("usaTable");
+        table.setAttribute("style", "font-size:14px; font-weight:bold;");
+      }
+    });
+
+    function americacreator(data, data2, globaljson) {
+      if ($(window).width() < 768) {
+        addCellHeader("usathead", "Region & Active Cases", "color:white");
+        addCellHeader("usathead", "Total Cases", "color:white");
+        addCellHeader("usathead", "Deaths", "color:white");
+        addCellHeader("usathead", "Recovered", "color:white");
+
+      }
+      if ($(window).width() > 768) {
+        addCellHeader("usathead", "Region & Recovery Rate", "color:white");
+        addCellHeader("usathead", "Total Cases", "color:white");
+        addCellHeader("usathead", "New Cases", "color:white");
+        addCellHeader("usathead", "Deaths", "color:white");
+        addCellHeader("usathead", "Change", "color:white");
+        addCellHeader("usathead", "Recovered", "color:white");
+        addCellHeader("usathead", "Hospitalized", "color:white");
+        addCellHeader("usathead", "Critical", "color:white");
+
+      }
+      var allrows = rowarray(data2);
+
+      function addrow(id, row, newrow) {
+        var positive = 0;
+        var positive1 = parseInt(verify(row[2]));
+        var positive2 = parseInt(verify(newrow[3]));
+        if (positive2 > positive1 || positive2 == positive1) {
+          positive = positive2
+        } else {
+          positive = positive1;
+        }
+        var positivechange = parseInt(verify(row[24]));
+        var hospitalized = parseInt(verify(row[5]));
+        var critical = parseInt(verify((row[7]))) + parseInt(verify((row[9])));
+        var recovered = parseInt(verify(row[11]));
+        var deaths = parseInt(verify(row[16]));
+        var deaths1 = parseInt(verify(newrow[4]));
+        var deaths2 = parseInt(verify(row[16]))
+        if (deaths1 > deaths2) {
+          deaths = deaths1
+        }
+
+        var deathincrease = parseInt(verify(row[30]));
+        var newid = id + "td";
+        var percent = ((recovered / parseInt(deaths) + parseInt(recovered)) * 100).toFixed(2);
+
+        usatotal[1] = usatotal[1] + parseInt(verify(positive));
+        usatotal[2] = usatotal[2] + parseInt(verify(positivechange));
+        usatotal[3] = usatotal[3] + parseInt(verify(deaths));
+        usatotal[4] = usatotal[4] + parseInt(verify(deathincrease));
+        usatotal[5] = usatotal[5] + parseInt(verify(recovered));
+        if (parseInt(recovered) > 10) {
+          usatotal[0] = usatotal[0] + positive;
+        }
+        //fuck code's missing;
+
+        var pchangep = ((positivechange / positive) * 100).toFixed(2);
+        if ($(window).width() < 768) {
+        if (percent > 0) {
+          addintddd(newid, "("+addcomma(positive-recovered-deaths)+")");
+        }
+          addcell(id, addcomma(parseInt(positive)) + " (+" + addcomma(parseInt(positivechange)) + ")", "color:#02c94b");
+          addcell(id, deaths, "color:#ff7b00");
+          addcell(id, recovered, "color:#00aeff", 0, 1);
+        }
+
+
+
+        if ($(window).width() > 768) {
+        if (percent > 0) {
+          addintdd(newid, deaths, recovered);
+        }
+          addcell(id, positive, "color:#02c94b");
+          addcell(id, "↑ " + addcomma(positivechange) + "(" + pchangep + "%)", "color:#02c94b");
+          addcell(id, deaths, "color:#ff7b00");
+          usatotal[8] = usatotal[8] + hospitalized;
+          var deathchangep = ((deathincrease / deaths) * 100).toFixed(2);
+          addcell(id, "↑ " + addcomma(deathincrease) + "(" + deathchangep + "%)", "color:#ff5805");
+          addcell(id, recovered, "color:#00aeff", 0, 1);
+          addcell(id, hospitalized, "color:orange;", 0, 1);
+          addcell(id, critical, "color:yellow;", 0, 1)
+        }
+      }
+
+
+      addrow("Alaska", cellarray(rowarray(data)[1]), cellarray(allrows[2]));
+      addrow("Alabama", cellarray(rowarray(data)[2]), cellarray(allrows[1]));
+      addrow("Arkansas", cellarray(rowarray(data)[3]), cellarray(allrows[4]));
+      addrow("Arizona", cellarray(rowarray(data)[5]), cellarray(allrows[3]));
+      addrow("California", cellarray(rowarray(data)[6]), cellarray(allrows[5]));
+      addrow("Colorado", cellarray(rowarray(data)[7]), cellarray(allrows[6]));
+      addrow("Connecticut", cellarray(rowarray(data)[8]), cellarray(allrows[7]));
+      addrow("Dcolumbia", cellarray(rowarray(data)[9]), cellarray(allrows[9]));
+      addrow("Delaware", cellarray(rowarray(data)[10]), cellarray(allrows[8]));
+      addrow("Florida", cellarray(rowarray(data)[11]), cellarray(allrows[10]));
+      addrow("Georgia", cellarray(rowarray(data)[12]), cellarray(allrows[11]));
+      addrow("Guam", cellarray(rowarray(data)[13]), cellarray(allrows[12]));
+      addrow("Hawaii", cellarray(rowarray(data)[14]), cellarray(allrows[13]));
+      addrow("Iowa", cellarray(rowarray(data)[15]), cellarray(allrows[17]));
+      addrow("Idaho", cellarray(rowarray(data)[16]), cellarray(allrows[14]));
+      addrow("Illinois", cellarray(rowarray(data)[17]), cellarray(allrows[15]));
+      addrow("Indiana", cellarray(rowarray(data)[18]), cellarray(allrows[16]));
+      addrow("Kansas", cellarray(rowarray(data)[19]), cellarray(allrows[18]));
+      addrow("Kentucky", cellarray(rowarray(data)[20]), cellarray(allrows[19]));
+      addrow("Louisiana", cellarray(rowarray(data)[21]), cellarray(allrows[20]));
+      addrow("Massachusetts", cellarray(rowarray(data)[22]), cellarray(allrows[23]));
+      addrow("Maryland", cellarray(rowarray(data)[23]), cellarray(allrows[22]));
+      addrow("Maine", cellarray(rowarray(data)[24]), cellarray(allrows[21]));
+      addrow("Michigan", cellarray(rowarray(data)[25]), cellarray(allrows[24]));
+      addrow("Minnesota", cellarray(rowarray(data)[26]), cellarray(allrows[25]));
+      addrow("Missouri", cellarray(rowarray(data)[27]), cellarray(allrows[27]));
+      addrow("Northern Marianas", cellarray(rowarray(data)[28]), cellarray(allrows[37]));
+      addrow("Mississippi", cellarray(rowarray(data)[29]), cellarray(allrows[26]));
+      addrow("Montana", cellarray(rowarray(data)[30]), cellarray(allrows[28]));
+      addrow("North Carolina", cellarray(rowarray(data)[31]), cellarray(allrows[35]));
+      addrow("North Dakota", cellarray(rowarray(data)[32]), cellarray(allrows[36]));
+      addrow("Nebraska", cellarray(rowarray(data)[33]), cellarray(allrows[29]));
+      addrow("New Hampshire	", cellarray(rowarray(data)[34]), cellarray(allrows[31]));
+      addrow("New Jersey", cellarray(rowarray(data)[35]), cellarray(allrows[32]));
+      addrow("New Mexico", cellarray(rowarray(data)[36]), cellarray(allrows[33]));
+      addrow("Nevada", cellarray(rowarray(data)[37]), cellarray(allrows[30]));
+      addrow("New York", cellarray(rowarray(data)[38]), cellarray(allrows[34]));
+      addrow("Ohio", cellarray(rowarray(data)[39]), cellarray(allrows[38]));
+      addrow("Oklahoma", cellarray(rowarray(data)[40]), cellarray(allrows[39]));
+      addrow("Oregon", cellarray(rowarray(data)[41]), cellarray(allrows[40]));
+      addrow("Pennsylvania", cellarray(rowarray(data)[42]), cellarray(allrows[41]));
+      addrow("Puerto Rico", cellarray(rowarray(data)[43]), cellarray(allrows[42]));
+      addrow("Rhode Island", cellarray(rowarray(data)[44]), cellarray(allrows[43]));
+      addrow("South Carolina", cellarray(rowarray(data)[45]), cellarray(allrows[44]));
+      addrow("South Dakota", cellarray(rowarray(data)[46]), cellarray(allrows[45]));
+      addrow("Tennessee", cellarray(rowarray(data)[47]), cellarray(allrows[46]));
+      addrow("Texas", cellarray(rowarray(data)[48]), cellarray(allrows[47]));
+      addrow("Utah", cellarray(rowarray(data)[49]), cellarray(allrows[48]));
+      addrow("Virginia", cellarray(rowarray(data)[50]), cellarray(allrows[51]));
+      addrow("Virgin Islands", cellarray(rowarray(data)[51]), cellarray(allrows[50]));
+      addrow("Vermont", cellarray(rowarray(data)[52]), cellarray(allrows[49]));
+      addrow("Washington", cellarray(rowarray(data)[53]), cellarray(allrows[52]));
+      addrow("Wisconsin", cellarray(rowarray(data)[54]), cellarray(allrows[54]));
+      addrow("West Virginia", cellarray(rowarray(data)[55]), cellarray(allrows[53]));
+      addrow("Wyoming", cellarray(rowarray(data)[56]), cellarray(allrows[55]));
+
+      //  console.log(countriesjson[1]);
+      // var rerate=((usatotal[5]/usatotal[0])*100).toFixed(2);
+      var nincrease = ((countriesjson[1].todayCases / (countriesjson[1].cases - countriesjson[1].todayCases)) * 100).toFixed(2);
+
+      var dincrease = ((countriesjson[1].todayDeaths) / (countriesjson[1].deaths - countriesjson[1].todayDeaths) * 100).toFixed(2);
+
+      if ($(window).width() < 768) {
+      addintddd("usatotaltd", "("+addcomma(countriesjson[1].cases-countriesjson[1].deaths-countriesjson[1].recovered)+")");
+      if(countriesjson[1].todayCases>usatotal[2]){
+        addcell("usatotal", addcomma(countriesjson[1].cases) + "(+" + addcomma(countriesjson[1].todayCases) + ")", "color:#02c94b");}
+        else{ addcell("usatotal", addcomma(countriesjson[1].cases) + "(+" + addcomma(usatotal[2]) + ")", "color:#02c94b");}
+        addcell("usatotal", addcomma(countriesjson[1].deaths), "color:#ff7b00;")
+        addcell("usatotal", addcomma(countriesjson[1].recovered), "color:#00aeff");
+      }
+      if ($(window).width() > 768) {
+      addintdd("usatotaltd", countriesjson[1].deaths, countriesjson[1].recovered);
+
+        addcell("usatotal", addcomma(countriesjson[1].cases), "color:#02c94b");
+        if(countriesjson[1].todayCases>usatotal[2]){addcell("usatotal", "↑ " + addcomma(countriesjson[1].todayCases) + "(" + nincrease + "%)", "color:#02c94b");}
+        else{addcell("usatotal", "↑ " + addcomma(usatotal[2]) + "(" + nincrease + "%)", "color:#02c94b");}
+        addcell("usatotal", addcomma(countriesjson[1].deaths), "color:#ff7b00;")
+        addcell("usatotal", "↑ " + countriesjson[1].todayDeaths + "(" + dincrease + "%)", "color:#ff5805");
+        addcell("usatotal", countriesjson[1].recovered, "color:#00aeff");
+        addcell("usatotal", (parseInt(usatotal[8])).toFixed(0), "color:orange");
+        addcell("usatotal", countriesjson[1].critical, "color:yellow");
+
+      }
+      // console.log(usatotal);
+      $(document).ready(function() {
+        $('#usaTable').DataTable({
+          "bPaginate": true,
+          "bLengthChange": false,
+          "bFilter": true,
+          "bInfo": false,
+          columnDefs: [{
+            type: 'formatted-num',
+            targets: [1, 2, bahubali(), bahubali2()]
+          }],
+          //"scrollY": "425px",
+          "scrollCollapse": false,
+          "order": [
+            [1, "desc"]
+          ],
+          "bAutoWidth": false
+        });
+
+      });
+
+    }
+
+    function brazilajax() {
+      return $.ajax({
+        type: "GET",
+        url: "https://raw.githubusercontent.com/wcota/covid19br/master/cases-brazil-total.csv",
+        dataType: "text",
+        success: function(data) {
+          brazilcreator(data);
+          if ($(window).width() < 768) {
+            var table = document.getElementById("brazilTable");
+            table.setAttribute("style", "font-size:14px; font-weight:bold;");
+          }
+        },
+      });
+    }
+
+    function brazilcreator(data) {
+      if ($(window).width() < 768) {
+        addCellHeader("brazilthead", "Region & Active Cases", "color:white");
+        addCellHeader("brazilthead", "Total Cases", "color:white");
+        addCellHeader("brazilthead", "Deaths", "color:white");
+        addCellHeader("brazilthead", "Recovered", "color:white");
+      }
+      if ($(window).width() > 768) {
+        addCellHeader("brazilthead", "Region & RecoveryRate", "color:white");
+        addCellHeader("brazilthead", "Total Cases", "color:white");
+        addCellHeader("brazilthead", "New Cases", "color:white");
+        addCellHeader("brazilthead", "Deaths", "color:white");
+        addCellHeader("brazilthead", "Changes", "color:white");
+        addCellHeader("brazilthead", "Recovered", "color:white");
+        addCellHeader("brazilthead", "Active", "color:white");
+        addCellHeader("brazilthead", "Tests   ", "color:white");
+      }
+      var allrows = rowarray(data);
+
+      function addrow(id, row) {
+        var recovered = parseInt(row[11]);
+        var positive = parseInt(row[2]);
+        // console.log(positive)
+        // console.log(recovered);
+
+        var pchangep = ((row[16] / (row[2] - row[16])) * 100).toFixed(2);
+
+
+
+        if ($(window).width() < 768) {
+        addintddd(id + "td", "("+addcomma(row[2]-row[5]-recovered)+")");
+          addcell(id, addcomma(parseInt(row[2])) + "(+" + addcomma(parseInt(row[16])) + ")", "color:#02c94b")
+          addcell(id, row[5], "color:#ff7b00");
+          addcell(id, row[11], "color:#00aeff");
+        }
+        if ($(window).width() > 768) {
+        addintdd(id + "td", row[5], recovered);
+          addcell(id, row[2], "color:#02c94b") //positive
+          addcell(id, "↑ " + addcomma(parseInt(row[16])) + "(" + pchangep + "%)", "color:#02c94b") //change
+          addcell(id, row[5], "color:#ff7b00"); // deaths
+
+          var dchangep = ((row[17] / (row[5] - row[17])) * 100).toFixed(2);
+          addcell(id, "↑ " + row[17] + "(" + dchangep + "%)", "color:#ff5805"); //change;
+          addcell(id, row[11], "color:#00aeff"); //recovered
+          addcell(id, (parseInt(row[2]) - parseInt(row[11]) - parseInt(row[5])), "color:yellow;")
+          addcell(id, row[13], "color:orange");
+        }
+      }
+      addrow("Acre", cellarray(allrows[2]));
+      addrow("Alagoas", cellarray(allrows[3]));
+      addrow("Amazonas", cellarray(allrows[4]));
+      addrow("Amapa", cellarray(allrows[5]));
+      // $('#australiacontainer').appendTo('#ipbased');
+      addrow("Bahia", cellarray(allrows[6]));
+      addrow("Ceara", cellarray(allrows[7]));
+      addrow("Distrito Federal", cellarray(allrows[8]));
+      addrow("Espirito Santo", cellarray(allrows[9]));
+
+      addrow("Goias", cellarray(allrows[10]));
+      addrow("Maranhao", cellarray(allrows[11]));
+      addrow("Minas Gerais", cellarray(allrows[12]));
+      addrow("Mato Grosso do Sul", cellarray(allrows[13]));
+
+      addrow("Mato Grosso", cellarray(allrows[14]));
+      addrow("Para", cellarray(allrows[15]));
+      addrow("Paraiba", cellarray(allrows[16]));
+      addrow("Pernambuco", cellarray(allrows[17]));
+      addrow("Paraui", cellarray(allrows[18]));
+      addrow("Parana", cellarray(allrows[19]));
+
+      addrow("Rio de Janeiro", cellarray(allrows[20]));
+      addrow("Rio Grande do Norte", cellarray(allrows[21]));
+      addrow("Rondonia", cellarray(allrows[22]));
+      addrow("Roraima", cellarray(allrows[23]));
+      addrow("Rio Grande do Sul", cellarray(allrows[24]));
+
+      addrow("Santa Catarina", cellarray(allrows[25]));
+      addrow("Sergipe", cellarray(allrows[26]));
+      addrow("Sao Paulo", cellarray(allrows[27]));
+      addrow("Tocantins", cellarray(allrows[28]));
+
+      $(document).ready(function() {
+
+        $('#brazilTable').DataTable({
+          "bPaginate": true,
+          "bLengthChange": false,
+          "bFilter": true,
+          "bInfo": false,
+          columnDefs: [{
+            type: 'formatted-num',
+            targets: [1, 2, bahubali(), bahubali2()]
+          }],
+          //"scrollY": "425px",
+          "scrollCollapse": false,
+          "order": [
+            [1, "desc"]
+          ],
+          "bAutoWidth": false
+        });
+
+      });
+
+      document.getElementById("brazilcontainer").setAttribute("style", "display:block");
+    }
+    brazilajax();
+  }
+});
+
+$.when(returnip()).done(function(a1) {
+  if (globalIP.country_name.indexOf("Pakistan") != -1) {
+    function pakajax() {
+      return $.ajax({
+        type: "GET",
+        url: "https://raw.githubusercontent.com/amantalreja450/COVID-Pak/master/city.csv",
+        dataType: "text",
+        success: function(data) {
+        console.log("success");
+          pakdata=data;
+        },
+      });
+    }
+    function sindhajax() {
+      return $.ajax({
+        type: "GET",
+        url: "https://raw.githubusercontent.com/amantalreja450/COVID-Pak/master/sindhmain.csv",
+        dataType: "text",
+        success: function(data) {
+          sindhdata=data;
+    //      console.log(rowarray(sindhdata).length)
+        },
+      });
+    }
+    function punjaboldajax() {
+      return $.ajax({
+        type: "GET",
+        url: "https://raw.githubusercontent.com/amantalreja450/COVID-Pak/master/punjabold.csv",
+        dataType: "text",
+        success: function(data) {
+        console.log("success");
+          punjabolddata=data;
+        },
+      });
+    }
+    function punjabajax() {
+      return $.ajax({
+        type: "GET",
+        url: "https://raw.githubusercontent.com/amantalreja450/COVID-Pak/master/punjabnew.csv",
+        dataType: "text",
+        success: function(data) {
+        console.log("success");
+          punjabdata=data;
+        },
+      });
+    }
+    function kpkajax() {
+      return $.ajax({
+        type: "GET",
+        url: "https://raw.githubusercontent.com/amantalreja450/COVID-Pak/master/kpkmain.csv",
+        dataType: "text",
+        success: function(data) {
+        console.log("success");
+          kpkdata=data;
+        },
+      });
+    }
+
+    $.when(pakajax(),kpkajax(),sindhajax(),punjabajax(),punjaboldajax()).done(function(a1,a2,a3,a4,a5){
+    pakcreator(pakdata);
+    });
+
+    function pakcreator(data) {
+      if ($(window).width() < 768) {
+        addCellHeader("pakTablethead", "Region & Active Cases", "color:white")
+        addCellHeader("pakTablethead", "Total Cases", "color:white");
+        addCellHeader("pakTablethead", "Deaths", "color:white");
+        addCellHeader("pakTablethead", "Recovered", "color:white");
+      }
+
+      if ($(window).width() > 768) {
+        addCellHeader("pakTablethead", "Region & Recovery Rate", "color:white")
+        addCellHeader("pakTablethead", "Total Cases", "color:white");
+        addCellHeader("pakTablethead", "New Cases", "color:white");
+        addCellHeader("pakTablethead", "Deaths", "color:white");
+        addCellHeader("pakTablethead", "Changes", "color:white")
+        addCellHeader("pakTablethead", "Recovered", "color:white");
+        addCellHeader("pakTablethead", "Changes", "color:white");
+        addCellHeader("pakTablethead", "Active", "color:white");
+      }
+      if ($(window).width() < 768) {
+        addCellHeader("sindhthead", "Region & Active Cases", "color:white")
+        addCellHeader("sindhthead", "Total Cases", "color:white");
+        addCellHeader("sindhthead", "Deaths", "color:white");
+        addCellHeader("sindhthead", "Recovered", "color:white");
+      }
+
+      if ($(window).width() > 768) {
+        addCellHeader("sindhthead", "Region & Recovery Rate", "color:white")
+        addCellHeader("sindhthead", "Total Cases", "color:white");
+        addCellHeader("sindhthead", "New Cases", "color:white");
+        addCellHeader("sindhthead", "Deaths", "color:white");
+        addCellHeader("sindhthead", "Changes", "color:white")
+        addCellHeader("sindhthead", "Recovered", "color:white");
+        addCellHeader("sindhthead", "Changes", "color:white");
+        addCellHeader("sindhthead", "Active", "color:white");
+      }
+      if ($(window).width() < 768) {
+        addCellHeader("punjabthead", "Region", "color:white")
+        addCellHeader("punjabthead", "Total Cases", "color:white");
+        addCellHeader("punjabthead", "Deaths", "color:white");
+        addCellHeader("punjabthead", "Recovered", "color:white");
+      }
+
+      if ($(window).width() > 768) {
+        addCellHeader("punjabthead", "Region", "color:white")
+        addCellHeader("punjabthead", "Total Cases", "color:white");
+        addCellHeader("punjabthead", "New Cases", "color:white");
+        addCellHeader("punjabthead", "Deaths", "color:white");
+        addCellHeader("punjabthead", "Changes", "color:white")
+        addCellHeader("punjabthead", "Recovered", "color:white");
+        addCellHeader("punjabthead", "Changes", "color:white");
+        addCellHeader("punjabthead", "Active", "color:white");
+      }
+      if ($(window).width() < 768) {
+        addCellHeader("kpkthead", "Region & Active Cases", "color:white")
+        addCellHeader("kpkthead", "Total Cases", "color:white");
+        addCellHeader("kpkthead", "Deaths", "color:white");
+        addCellHeader("kpkthead", "Recovered", "color:white");
+      }
+
+      if ($(window).width() > 768) {
+        addCellHeader("kpkthead", "Region", "color:white")
+        addCellHeader("kpkthead", "Total Cases", "color:white");
+        addCellHeader("kpkthead", "New Cases", "color:white");
+        addCellHeader("kpkthead", "Deaths", "color:white");
+        addCellHeader("kpkthead", "Changes", "color:white")
+        addCellHeader("kpkthead", "Recovered", "color:white");
+        addCellHeader("kpkthead", "Changes", "color:white");
+        addCellHeader("kpkthead", "Active", "color:white");
+      }
+
+      var allrows = rowarray(data);
+
+      function addrow(id, row,other) {
+        var positive = row[1];
+        var positivechange = row[2];
+        var deaths = row[4];
+        var deathchange = row[6];
+        var recovered = row[3];
+        var rchange=row[7];
+        var active = positive-deaths-recovered;
+        var pchangep = ((positivechange / (positive - positivechange)) * 100).toFixed(2);
+        var dchangep = ((deathchange / (deaths - deathchange)) * 100).toFixed(2);
+        var rchangep=((rchange/(recovered-rchange))*100).toFixed(2);
+    //    var recoveryrate= (((deaths+recovered)/recovered)*100).toFixed(2);
+var colorchecker="color:#02cc7b";
+if((positivechange/positive)*100>4){colorchecker="color:white;background-color:red;"}
+
+        if ($(window).width() < 768) {
+        if(other!=1){
+        addintddd(id+"td","("+addcomma(active)+")");}
+          addcell(id, addcomma(parseInt(row[1])) + "(+" + addcomma(parseInt(row[2])) + ")", colorchecker,1);
+          addcell(id, deaths, "color:#ff7b00");
+          addcell(id,recovered,"color:#00aeff");
+        }
+        if ($(window).width() > 768) {
+        if(other!=1){
+        addintdd(id+"td",deaths,recovered);}
+          addcell(id,parseInt(row[1]), "color:#02cc7b;");
+          addcell(id,"↑ "+addcomma(parseInt(positivechange))+"("+pchangep+"%)",colorchecker,1);
+          addcell(id, deaths, "color:#ff7b00");
+          addcell(id,"↑ "+addcomma(parseInt(deathchange))+"("+dchangep+"%)","color:#ff7b00",1);
+          addcell(id,recovered,"color:lightblue");
+          addcell(id,"↑ "+rchange+"("+rchangep+"%)","color:#00aeff");
+          addcell(id,row[5],"color:yellow");
+      }
+    }
+
+      function addrowsindh(id,row){
+      var positive= parseInt(row[1]);
+     var positiveincrease=parseInt(row[2]);
+     var recovered=parseInt(row[3]);
+     var deaths=parseInt(row[4]);
+     var active=positive-recovered-deaths
+     var pchangep = ((positiveincrease / (positive - positiveincrease)) * 100).toFixed(2);
+  //      var dchangep = ((deathchange / (deaths - deathchange)) * 100).toFixed(2);
+      var rrate= (((recovered+deaths)/recovered)*100).toFixed(2);
+
+      var colorchecker="color:#02cc7b";
+if((positiveincrease/positive)*100>6){colorchecker="color:white;background-color:red;"}
+      if ($(window).width() < 768) {
+      addintddd(id+"td","("+addcomma(active)+")");
+          addcell(id, addcomma(parseInt(positive)) + "(+" + addcomma(parseInt(positiveincrease)) + ")", colorchecker,1);
+          addcell(id, deaths, "color:#ff7b00");
+          addcell(id,recovered,"color:#00aeff");
+        }
+        if ($(window).width() > 768) {
+        addintdd(id+"td",deaths,recovered);
+          addcell(id,parseInt(positive), "color:#02cc7b");
+          addcell(id,"↑ "+addcomma(positiveincrease)+"("+pchangep+"%)",colorchecker,1);
+          addcell(id, deaths, "color:#ff7b00");
+          addcell(id,"↑ "+" "+"("+"-"+"%)","color:#ff7b00",1);
+          addcell(id,recovered,"color:lightblue");
+          addcell(id,"↑ "+" "+"("+"-"+"%)","color:#00aeff");
+          addcell(id,active,"color:yellow");
+      }
+      };
+
+      var allrowsindh=rowarray(sindhdata);
+      var allrowpunjabold=rowarray(punjabolddata);
+      var allrowpunjabnew=rowarray(punjabdata);
+      var allrowkpk=rowarray(kpkdata);
+
+      function addrowpunjab(id,id2,newrow,oldrow){
+      var positivenew1= newrow[1];
+      var positiveold1=oldrow[1];
+      var positivenew2=newrow[3];
+      var positiveold2=oldrow[3];
+
+      var pincrease1=positivenew1-positiveold1;
+       var pincrease2=positivenew2-positiveold2;
+      var pchangep1= ((pincrease1/positiveold1)*100).toFixed(2);
+      var pchangep2= ((pincrease2/positiveold2)*100).toFixed(2);
+      var colorchecker1="color:#02cc7b";
+      var colorchecker2="color:#02cc7b";
+if((pincrease1/positivenew1)*100>6){colorchecker1="color:white;background-color:red;"}
+if((pincrease2/positivenew2)*100>6){colorchecker2="color:white;background-color:red;"}
+      if ($(window).width() < 768) {
+          addcell(id, addcomma(parseInt(positivenew1)) + "(+" + addcomma(parseInt(positivenew1-positiveold1)) + ")", colorchecker1,1);
+          addcell(id, "-", "color:#ff7b00");
+          addcell(id,"-","color:#00aeff");
+          addcell(id2, addcomma(parseInt(positivenew2)) + "(+" + addcomma(parseInt(positivenew2-positiveold2)) + ")", colorchecker2,1);
+          addcell(id2, "-", "color:#ff7b00");
+          addcell(id2,"-","color:#00aeff");
+        }
+        if ($(window).width() > 768) {
+          addcell(id,parseInt(positivenew1), "color:#02cc7b;");
+          addcell(id,"↑ "+addcomma(pincrease1)+"("+pchangep1+"%)",colorchecker1,1);
+          addcell(id, "-", "color:#ff7b00");
+          addcell(id,"↑ "+" "+"("+"-"+"%)","color:#ff7b00",1);
+          addcell(id,"-","color:lightblue");
+          addcell(id,"↑ "+" "+"("+"-"+"%)","color:#00aeff");
+          addcell(id,"-","color:yellow");
+
+          addcell(id2,parseInt(positivenew2), "color:#02cc7b;");
+          addcell(id2,"↑ "+addcomma(pincrease2)+"("+pchangep1+"%)",colorchecker2,1);
+          addcell(id2,"-", "color:#ff7b00");
+          addcell(id2,"↑ "+" "+"("+"-"+"%)","color:#ff7b00",1);
+          addcell(id2,"-","color:lightblue");
+          addcell(id2,"↑ "+" "+"("+"-"+"%)","color:#00aeff");
+          addcell(id2,"-","color:yellow");
+      }
+      }
+function addrowkpk(id,row){
+var positive= parseInt(row[1]);
+var positiveincrease=parseInt(row[2]);
+var deaths= parseInt(row[3]);
+var deathincrease=parseInt(row[4]);
+var recovered = parseInt(row[5]);
+var pchangep= ((positiveincrease/(positive-positiveincrease))*100).toFixed(2);
+var active= positive-recovered-deaths;
+var dchangep=((deathincrease/(deaths-deathincrease))*100).toFixed(2);
+
+
+var colorchecker="color:#02cc7b"
+if((positiveincrease/positive)*100>6){colorchecker="color:white;background-color:red;"}
+
+        if ($(window).width() < 768) {
+        addintddd(id+"td","("+addcomma(active)+")");
+          addcell(id, addcomma(positive) + "(+" + addcomma(positiveincrease) + ")", colorchecker,1);
+          addcell(id, deaths, "color:#ff7b00");
+          addcell(id,recovered,"color:#00aeff");
+        }
+        if ($(window).width() > 768) {
+        addintdd(id+"td",deaths,recovered);
+          addcell(id,parseInt(row[1]), "color:#02cc7b");
+          addcell(id,"↑ "+addcomma(parseInt(positiveincrease))+"("+pchangep+"%)",colorchecker,1);
+          addcell(id, deaths, "color:#ff7b00");
+          addcell(id,"↑ "+addcomma(parseInt(deathincrease))+"("+dchangep+"%)","color:#ff7b00",1);
+          addcell(id,recovered,"color:lightblue");
+          addcell(id,"↑ "+" "+"("+"-"+"%)","color:#00aeff");
+          addcell(id,active,"color:yellow");
+      }
+
+}
+addrowsindh("sindh", cellarray(allrowsindh[27]));
+addrow("punjab",cellarray(allrows[37]));
+addrow("balochistan",cellarray(allrows[38]));
+addrowkpk("KPK",cellarray(allrowkpk[1]));
+addrow("gilgit",cellarray(allrows[40]));
+//sindh
+addrow("khanpur",cellarray(allrows[35]));
+addrowsindh("karachi",cellarray(allrowsindh[2]));
+addrowsindh("sukkur",cellarray(allrowsindh[14]));
+addrow("daharki",cellarray(allrows[31]));
+addrow("ubauro",cellarray(allrows[34]));
+addrowsindh("ghotki",cellarray(allrowsindh[13]));
+addrow("ghotkic",cellarray(allrows[33]));
+addrowsindh("hyderabad",cellarray(allrowsindh[3]));
+addrowsindh("larkana",cellarray(allrowsindh[16]));
+addrow("mpm",cellarray(allrows[32]));
+addrowsindh("khairpur",cellarray(allrowsindh[15]));
+addrowsindh("shikarpur",cellarray(allrowsindh[24]));
+addrowsindh("jacobabad",cellarray(allrowsindh[25]));
+addrowsindh("shaheed",cellarray(allrowsindh[6]));
+addrowsindh("kambar",cellarray(allrowsindh[18]));
+addrowsindh("sanghar",cellarray(allrowsindh[10]));
+addrowsindh("jamshoro",cellarray(allrowsindh[4]));
+addrowsindh("kashmore",cellarray(allrowsindh[20]));
+addrowsindh("dadu",cellarray(allrowsindh[17]));
+addrowsindh("mirpur",cellarray(allrowsindh[21]));
+addrowsindh("badin",cellarray(allrowsindh[5]));
+addrowsindh("tando",cellarray(allrowsindh[11]));
+addrowsindh("sujawal",cellarray(allrowsindh[8]));
+addrowsindh("naushero",cellarray(allrowsindh[7]));
+addrowsindh("matiari",cellarray(allrowsindh[19]));
+addrowsindh("tharparkar",cellarray(allrowsindh[23]));
+addrowsindh("thatta",cellarray(allrowsindh[9]));
+addrowsindh("umerkot",cellarray(allrowsindh[22]));
+addrowsindh("allahyar",cellarray(allrowsindh[12]));
+//punjab
+
+//addrow("Attock",cellarray(allrows[41]),1);
+
+//addrow("Bhawalnagar",cellarray(allrows[42]),1);
+
+//addrow("Bhawalpur",cellarray(allrows[43]),1);
+//addrow("Bhakkar",cellarray(allrows[44]),1);
+//addrow("Chakwal",cellarray(allrows[45]),1);
+//addrow("Chiniot",cellarray(allrows[46]),1);
+//addrow("DG Khan",cellarray(allrows[47]),1);
+//addrow("Faisalabad",cellarray(allrows[48]),1);
+addrowpunjab("Attock","Gujrat",cellarray(allrowpunjabnew[0]),cellarray(allrowpunjabold[0]));
+addrowpunjab("Bhawalpur","Hafizabad",cellarray(allrowpunjabnew[1]),cellarray(allrowpunjabold[1]));
+addrowpunjab("Bhawalnagar","Jhang",cellarray(allrowpunjabnew[2]),cellarray(allrowpunjabold[2]));
+addrowpunjab("Bhakkar","Jhelum",cellarray(allrowpunjabnew[3]),cellarray(allrowpunjabold[3]));
+addrowpunjab("Chakwal","Kasur",cellarray(allrowpunjabnew[4]),cellarray(allrowpunjabold[4]));
+addrowpunjab("Chiniot","Khanewal",cellarray(allrowpunjabnew[5]),cellarray(allrowpunjabold[5]));
+addrowpunjab("DG Khan","Khushab",cellarray(allrowpunjabnew[6]),cellarray(allrowpunjabold[6]));
+addrowpunjab("Faisalabad","Lahore",cellarray(allrowpunjabnew[7]),cellarray(allrowpunjabold[7]));
+
+addrowpunjab("Gujranwala","Lodharan",cellarray(allrowpunjabnew[8]),cellarray(allrowpunjabold[8]));
+addrowpunjab("Layyah","RY Khan",cellarray(allrowpunjabnew[9]),cellarray(allrowpunjabold[9]));
+addrowpunjab("MB Din","Rajanpur",cellarray(allrowpunjabnew[10]),cellarray(allrowpunjabold[10]));
+addrowpunjab("Mianwali","Rawalpindi",cellarray(allrowpunjabnew[11]),cellarray(allrowpunjabold[11]));
+addrowpunjab("Multan","Sahiwal",cellarray(allrowpunjabnew[12]),cellarray(allrowpunjabold[12]));
+addrowpunjab("Muzaffargarh","Sargodha",cellarray(allrowpunjabnew[13]),cellarray(allrowpunjabold[13]));
+addrowpunjab("Narowal","Sheikhupura",cellarray(allrowpunjabnew[14]),cellarray(allrowpunjabold[14]));
+addrowpunjab("Nankana","Sialkot",cellarray(allrowpunjabnew[15]),cellarray(allrowpunjabold[15]));
+addrowpunjab("Okara","TT Singh",cellarray(allrowpunjabnew[16]),cellarray(allrowpunjabold[16]));
+addrowpunjab("Pakpattan","Vehari",cellarray(allrowpunjabnew[17]),cellarray(allrowpunjabold[17]));
+
+
+
+
+addrowkpk("Peshawar",cellarray(allrowkpk[2]),0);
+addrowkpk("Charsadda",cellarray(allrowkpk[3]),0);
+addrowkpk("Nowshera",cellarray(allrowkpk[4]),0);
+addrowkpk("Khyber",cellarray(allrowkpk[5]),0);
+addrowkpk("Mohmand",cellarray(allrowkpk[6]),0);
+addrowkpk("Peshawar(Division)",cellarray(allrowkpk[7]));
+
+addrowkpk("Mardan",cellarray(allrowkpk[8]),0);
+addrowkpk("Swabi",cellarray(allrowkpk[9]),0);
+addrowkpk("Mardan(Division)",cellarray(allrowkpk[10]),0);
+addrowkpk("SWAT",cellarray(allrowkpk[11]),0);
+addrowkpk("Buner",cellarray(allrowkpk[12]),0);
+addrowkpk("DIR LOWER",cellarray(allrowkpk[13]),0);
+addrowkpk("DIR UPPER",cellarray(allrowkpk[14]),0);
+addrowkpk("Shangla",cellarray(allrowkpk[15]),0);
+addrowkpk("MalaKand",cellarray(allrowkpk[16]),0);
+addrowkpk("Chitral Lower",cellarray(allrowkpk[17]),0);
+addrowkpk("Chitral Upper",cellarray(allrowkpk[18]),0);
+addrowkpk("Bajaur",cellarray(allrowkpk[19]),0);
+addrowkpk("Malakand (Division)",cellarray(allrowkpk[20]),0);
+
+
+addrowkpk("Mansehra",cellarray(allrowkpk[21]),0);
+addrowkpk("Abbottabad",cellarray(allrowkpk[22]),0);
+addrowkpk("Haripur",cellarray(allrowkpk[23]),0);
+addrowkpk("Tor Ghar",cellarray(allrowkpk[24]),0);
+addrowkpk("Kohistan Upper",cellarray(allrowkpk[25]),0);
+addrowkpk("Kohistan Lower",cellarray(allrowkpk[26]),0);
+addrowkpk("Kolai Pallas",cellarray(allrowkpk[27]),0);
+addrowkpk("Battagram",cellarray(allrowkpk[28]),0);
+addrowkpk("Hazara Division",cellarray(allrowkpk[29]),0);
+
+
+addrowkpk("Kohat ",cellarray(allrowkpk[30]),0);
+addrowkpk("Hangu",cellarray(allrowkpk[31]),0);
+addrowkpk("Karak",cellarray(allrowkpk[32]),0);
+addrowkpk("Kurram",cellarray(allrowkpk[33]),0);
+addrowkpk("Orakzai",cellarray(allrowkpk[34]),0);
+addrowkpk("Kohat (Division)",cellarray(allrowkpk[35]),0);
+addrowkpk("Bannu",cellarray(allrowkpk[36]),0);
+addrowkpk("Lakki Marwat",cellarray(allrowkpk[37]),0);
+
+addrowkpk("North Waziristan",cellarray(allrowkpk[38]),0);
+addrowkpk("Bannu (Division)",cellarray(allrowkpk[39]),0);
+addrowkpk("Dera Ismail Khan ",cellarray(allrowkpk[40]),0);
+addrowkpk("Tank",cellarray(allrowkpk[41]),0);
+addrowkpk("South Waziristan",cellarray(allrowkpk[42]),0);
+addrowkpk("Dera Ismail Khan (Division)",cellarray(allrowkpk[43]),0);
+$(document).ready(function() {
+        $('#kpkTable').DataTable({
+          "bPaginate": false,
+          "bLengthChange": false,
+          "bFilter": true,
+          columnDefs: [{
+            type: 'formatted-num',
+            targets: [1, 2, bahubali(), bahubali2()]
+          }],
+          "bInfo": false,
+          "order": [
+            [1, "desc"]
+          ],
+          "bAutoWidth": false
+        });
+
+      });
+
+$(document).ready(function() {
+        $('#pakTable').DataTable({
+          "bPaginate": false,
+          "bLengthChange": false,
+          "bFilter": true,
+          columnDefs: [{
+            type: 'formatted-num',
+            targets: [1, 2, bahubali(), bahubali2()]
+          }],
+          "bInfo": false,
+          "order": [
+            [1, "desc"]
+          ],
+          "bAutoWidth": false
+        });
+
+      });
+      $(document).ready(function() {
+        $('#punjabTable').DataTable({
+          "bPaginate": false,
+          "bLengthChange": false,
+          "bFilter": true,
+          columnDefs: [{
+            type: 'formatted-num',
+            targets: [1, 2, bahubali(), bahubali2()]
+          }],
+          "bInfo": false,
+          "order": [
+            [1, "desc"]
+          ],
+          "bAutoWidth": false
+        });
+
+      });
+
+      $(document).ready(function() {
+        $('#sindhTable').DataTable({
+          "bPaginate": false,
+          "bLengthChange": false,
+          "bFilter": true,
+          columnDefs: [{
+            type: 'formatted-num',
+            targets: [1, 2, bahubali(), bahubali2()]
+          }],
+          "bInfo": false,
+          "order": [
+            [1, "desc"]
+          ],
+          "bAutoWidth": false
+        });
+
+      });
+
+      document.getElementById("pakcontainer").setAttribute("style","display:block");
+       document.getElementById("sindhcontainer").setAttribute("style","display:block");
+        document.getElementById("punjabcontainer").setAttribute("style","display:block");
+         document.getElementById("kpkcontainer").setAttribute("style","display:block");
+
+  }
+}});
+$.when(returnip()).done(function(a1) {
+  if (globalIP.country_name.indexOf("Pakistan") != -1) {
+  var cheap=document.getElementById("navp");
+      var element=document.createElement("a");
+      var node= document.createTextNode("World");
+      element.appendChild(node);
+      element.setAttribute("href","./index.html");
+      element.setAttribute("class","navbar-brand");
+      if ($(window).width() < 768){
+      element.setAttribute("style","float:left;margin-right:12px;");}
+      else{element.setAttribute("style","float:left;margin-right:50px;");
+      }
+      cheap.appendChild(element);
+      var cheap=document.getElementById("navp");
+      var element=document.createElement("a");
+      var node= document.createTextNode("Plasma Donation");
+   //   element.setAttribute("style","margin-left:30px !Important")
+      element.appendChild(node);
+
+      element.setAttribute("href","./plasma-donation.html");
+      element.setAttribute("class","navbar-brand");
+      element.setAttribute("style","float:left");
+      cheap.appendChild(element);
+  }
+  if (globalIP.country_name.indexOf("Pakistan") == -1) {
+  var cheap=document.getElementById("navp");
+      var element=document.createElement("a");
+      var node= document.createTextNode("Pakistan");
+      element.appendChild(node);
+      element.setAttribute("href","./page1.html");
+      element.setAttribute("class","navbar-brand");
+      if ($(window).width() < 768){
+      element.setAttribute("style","float:left;margin-right:8px;");}
+      else{element.setAttribute("style","float:left;margin-right:50px;");
+      }
+      cheap.appendChild(element);
+      var cheap=document.getElementById("navp");
+      var element=document.createElement("a");
+      var node= document.createTextNode("Plasma Donation");
+   //   element.setAttribute("style","margin-left:30px !Important")
+      element.appendChild(node);
+
+      element.setAttribute("href","plasma-donation.html");
+      element.setAttribute("class","navbar-brand");
+      element.setAttribute("style","float:left");
+      cheap.appendChild(element);
+  }
+
+  });
+</script>
+<style>
+@media screen and (min-width: 768px){
+  #nava{
+    padding-right:50px !Important;
+  }
+}
+.col {
+  width: 100%;
+}
+.nowrap{
+  white-space: nowrap;
+}
+
+.navbar {
+  background-color: black;
+  border: solid 0px black;
+  border-radius: 100px;
+  height:60px;
+}
+
+#clear {
+  clear: both;
+}
+.clear{clear:both;}
+#newCases,#Active{float:left;}
+
+#col3function {
+  margin-top: 10px;
+  top: 10px;
+  background-color: #2a3880;
+  border-radius: 30px;
+  color: #DFDFEF;
+  font-size: 12px;
+  text-align: center;
+  font-weight: bolder;
+}
+
+#italycontainer {
+  background-color: #2a3880;
+  border-radius: 30px;
+  position: relative;
+}
+
+.table-striped>tbody>tr:nth-child(2n)>td,
+.table-striped>tbody>tr:nth-child(2n)>th {
+  background-color: #041f47;
+}
+
+.table-striped>tbody>tr:nth-child(2n+1)>td {
+  background-color: #2a3880;
+}
+
+#italycontainer {
+  top: 20px;
+  display: none;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+
+  .table-condensed>thead>tr>th,
+  .table-condensed>tbody>tr>th,
+  .table-condensed>tfoot>tr>th,
+  .table-condensed>thead>tr>td,
+  .table-condensed>tbody>tr>td,
+  .table-condensed>tfoot>tr>td {
+    padding-left: 0px;
+
+    padding: 8px;
+    padding-right:0px;
+    border: 0px;
+font-weight:600;
+font-size:13px;
+
+}
+}
+@media screen and (min-width: 768px) {
+
+  .table-condensed>thead>tr>th,
+  .table-condensed>tbody>tr>th,
+  .table-condensed>tfoot>tr>th,
+  .table-condensed>thead>tr>td,
+  .table-condensed>tbody>tr>td,
+  .table-condensed>tfoot>tr>td {
+    border: 0px;
+    font-weight: bold;
+    padding-left: 20px;
+font-weight:600;
+ }
+}
+
+#example {
+  border-radius: 10px;
+}
+
+#australiacontainer {
+  position: relative;
+  background-color: #2a3880;
+  border-radius: 30px;
+  top: 20px;
+  width: 100%;
+  display: none;
+  margin-bottom: 20px;
+}
+
+#australiaTable {
+  font-weight: bold;
+}
+
+#canadacontainer,
+#americacontainer,
+#brazilcontainer,#pakcontainer,#sindhcontainer,#punjabcontainer,#kpkcontainer{
+  position: relative;
+  background-color: #2a3880;
+  border-radius: 30px;
+  top: 20px;
+  width: 100%;
+  display:none;
+  margin-bottom: 20px;
+}
+
+#canadaTable {
+  border-radius: 10px;
+}
+@media screen and (min-width: 768px){
+  #canadacontainer,#americacontainer,#brazilcontainer,#australiacontainer,#col3function,#italycontainer,#pakcontainer,#sindhcontainer,#punjabcontainer,#kpkcontainer{
+    background-color:#12346e;
+
+  }
+  .table-striped>tbody>tr:nth-child(2n)>td,
+.table-striped>tbody>tr:nth-child(2n)>th {
+  background-color: #041f47;
+}
+
+.table-striped>tbody>tr:nth-child(2n+1)>td {
+  background-color: #12346e;
+}
+
+}
+@media screen and (max-width: 400px){.table-condensed>thead>tr>th,
+  .table-condensed>tbody>tr>th,
+  .table-condensed>tfoot>tr>th,
+  .table-condensed>thead>tr>td,
+  .table-condensed>tbody>tr>td,
+  .table-condensed>tfoot>tr>td{font-size:11px;
+  font-weight:620;}
+  }
+label{color:white;}
+</style>
