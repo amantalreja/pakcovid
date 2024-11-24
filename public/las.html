@@ -1,0 +1,399 @@
+<head>
+     <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+       <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"> </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+    </head>
+<body>
+<div id="parallax1">
+<nav class="navbar" id="navbar" style="top:40px;background-color:white;width:70%;margin-left:15%;border-radius:30px;padding:0px !Important;margin-top:0px;">
+    <p id="navp">
+
+      <a href="https://pakcovid.com" class="navbar-brand active" style="float:left;" id="nava">Home</a>
+    <a href="https://pakcovid.com/page1.html" class="navbar-brand" style="float:left;">World</a>
+    <a href="https://pakcovid.com/plasma-donation.html" class="navbar-brand" style="float:left;">Plasma </a>
+    
+    </p>
+  </nav>
+<h1 style="margin-top:20%;color:white;">
+you can learn
+</h1>
+<a href="#" class="btn btn-warning py-4 btn-custom-1">More About Us</a>
+  </div>
+  <h1>Learn something you never anticipated before.</h1>
+  
+<div style="background-color:red;padding:20px;min-height:200px;">
+<p>
+Treeplantation is one of the only options to stop global warming.
+</p>
+</div>
+  <div style="background-color:yellow;padding:20px;min-height:200px;">
+    The only way to find how good is your favorite song is to learn it.
+  </div>
+  <div style="background-color:green;padding:20px;min-height:200px;">
+   Volunteering is one of the ways to give back to our community where we all live.
+  </div>
+  <div id="decider">
+  
+    <h1> 
+      Do you want to Learn Online or Live?
+    </h1>
+    <div id="button1" style="text-align:center;">
+
+    </div>
+    <div style="clear:both;">
+    </div>
+    </div>
+  <div id="categories">
+    <h1>Categories</h1>
+     <div id="musicWhole">
+    <button id="lul" type="submit" style="border:0px;"><img src="https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2014/11/img196.jpg" style="width:100px;margin-right:50px;padding-left:0px;">Music</button>
+       <div id="violinBdiv" style="margin-left:20px;">
+    <button id= "violinB" type = "submit" style="border:0px;width:240px;margin:0px;padding:0px;text-align:center;"><img src="https://image.shutterstock.com/image-photo/close-view-violin-strings-bridge-600w-550988083.jpg" style="width:100px;margin-right:50px;padding-left:0px;position:relative;text-align:left;float:left;"> <p style="position:relative;float:left;top:25px;;">Violin</p></button>
+      <div id="violinDiv">
+      <iframe width="420" height="315"
+src="https://v637g.app.goo.gl/LuYHo2uF7AX6kcvn7" style="margin-left:30px;">
+      </iframe>
+          
+       <div id="bardash" style="text-align:center;padding:2px;">
+      <button type="button" class="btn btn-primary" style="position:relative;" id="vb2">Online</button>
+    <button type="button" class="btn btn-primary" style="position:relative;" id="vb1" >Live</button>
+    <div id="bardash1">
+
+</div>
+
+    <div id="bardash2">
+    
+    </div>
+    
+    </div>
+    </div>
+    </div>
+      
+    </div>
+  </div>
+    <div id="artWhole">
+      <button id="lul1" type="submit" style="border:0px;"><img src="https://thumbs.dreamstime.com/z/hand-kids-drawings-children-draw-paints-playroom-child-holding-crayon-his-hands-paper-crayons-drawing-159169183.jpg" style="width:100px;margin-right:50px;padding-left:0px;">Art</button>
+    </div>
+  </body>
+  <Script>
+  
+var mainCSV;
+var fixer=[0,0,0,0,0,0,0];
+
+$(document).ready(function() {
+  
+  // Find the initial scroll top when the page is loaded.
+  var initScrollTop = $(window).scrollTop();
+  
+  // Set the image's vertical background position based on the scroll top when the page is loaded.
+  $(parallax1).css({'background-position-y' : (initScrollTop/75)+'%'});
+  
+  // When the user scrolls...
+  $(window).scroll(function() {
+    
+    // Find the new scroll top.
+    var scrollTop = $(window).scrollTop();
+    
+    // Set the new background position.
+    $(parallax1).css({'background-position-y' : (scrollTop/75)+'%'});
+    
+  });
+  
+});
+
+var v=0
+$("#lul").click(function() {
+  if(v==1){
+    
+    $('#violinBdiv').hide('slide');
+    console.log("just hidden");
+    v=0;
+
+  }
+  else{$('#violinBdiv').show('slide');
+$('html, body').animate({
+    scrollTop: $(window).scrollTop() + 200});
+       v=1;}
+});
+var v1=0;
+$("#violinB").click(function() {
+  if(v1==1){
+    
+    $('#violinDiv').hide('slide');
+    console.log("just hidden");
+    v1=0;
+
+  }
+  else{$('#violinDiv').show('slide');
+$('html, body').animate({
+    scrollTop: $(window).scrollTop() + 200});
+       v1=1;}
+});
+function worker(div,text,id){
+  var mainDiv= document.getElementById(div);
+var buttonElement= document.createElement("button");
+  buttonElement.setAttribute("class","btn btn-primary");
+  buttonElement.setAttribute("id",id)
+  buttonElement.setAttribute("style","position:relative;margin-right:2px;");
+  buttonElement.appendChild(document.createTextNode(text))
+  mainDiv.appendChild(buttonElement);
+}
+
+$('bt1').click(function(){
+console.log("vb2 clciked")});
+
+var mainCSV=null;
+$.when(csvLoader()).done(function(a1) {
+ 
+ 
+});
+function rowArray(alldata) {
+  return alldata.split(/\r?\n|\r/);
+}
+function cellArray(onerow) {
+  return onerow.split(",");
+}
+function csvLoader() {
+  return $.ajax({
+    type: "GET",
+    url: "https://raw.githubusercontent.com/amantalreja450/COVID-Pak/master/opportunities.csv",
+    dataType: "text",
+    success: function(data) {
+    mainCSV=data;
+    },
+  });
+}
+function selectCreator(div,id,csvRows){
+var rowCSV=rowArray(mainCSV);
+
+var select= document.createElement('select');
+select.setAttribute("class","selectpicker");
+select.setAttribute("data-live-search","true");
+select.setAttribute("id",id);
+for(var i=1;i<rowCSV.length-1;i++){
+select.appendChild(addoption(cellArray(rowCSV[i])[0]));
+}
+
+//select.appendChild(addoption('B'));
+var currentdiv= document.getElementById(div);
+currentdiv.setAttribute("style","margin-top:10px !Important;")
+currentdiv.appendChild(select);
+
+
+console.log("please")
+}
+function addoption(text){
+var option= document.createElement("option");
+option.appendChild(document.createTextNode(text));
+return option;
+}
+//selectCreator('bardash','selectv');
+function onlineManager(div,bid,otherDiv,onlineopen,liveopen){
+var currentDiv= document.getElementById(div);
+addYT(div,"urlk","margin-left:30px;");
+$('#'+div).hide();
+
+$('#'+bid).click(function(){
+
+  if(fixer[onlineopen]==1){
+    
+    $('#'+div).hide('slide');
+    console.log("just hidden");
+    fixer[onlineopen]=0;
+
+  }
+  else{$('#'+div).show('slide');
+$('html, body').animate({
+    scrollTop: $(window).scrollTop() + 200});
+       fixer[onlineopen]=1;}
+
+
+console.log("vb2 clciked");
+$('#'+otherDiv).hide('slide');
+fixer[liveopen]=0;
+});
+
+}
+function addYT(div,link,margin){
+var currentDiv= document.getElementById(div);
+var iframe= document.createElement("iframe");
+iframe.setAttribute("width","420");
+iframe.setAttribute("height","315");
+iframe.setAttribute("src",link);
+iframe.setAttribute("style",margin);
+currentDiv.appendChild(iframe);
+}
+function liveManager(div,selectId,bid,otherDiv,locationDiv,liveopen,onlineopen,columnNumber,bMin,bNormal,bExtreme){
+var rowCSV= rowArray(mainCSV)
+selectCreator(div,selectId);
+$('#'+div).hide();
+var currentdiv= document.getElementById(div);
+var newdiv=document.createElement('div');
+newdiv.setAttribute('id',locationDiv);
+    var text= document.createTextNode('You Can Learn Live at Karachi PACC')
+    var p = document.createElement('p');
+    p.appendChild(text);
+    
+    newdiv.appendChild(p);
+   
+$('#'+bid).click(function(){
+console.log("online closed");
+$('#'+otherDiv).hide('slide');
+fixer[onlineopen]=0;
+ if(fixer[liveopen]==1){
+    
+    $('#'+div).hide('slide');
+    console.log("just hidden");
+    fixer[liveopen]=0;
+
+  }
+  else{$('#'+div).show('slide');
+$('html, body').animate({
+    scrollTop: $(window).scrollTop() + 200});
+       fixer[liveopen]=1;}
+});
+var threeBDivId='0';
+
+ var lastDivId = Date.now();
+    threeBDivId=lastDivId;
+var newDiv= document.createElement('div');
+newDiv.setAttribute('id',lastDivId);
+currentdiv.appendChild(newDiv);
+var worker1id = Math.floor(Math.random() * 100)
+worker(lastDivId,'low',worker1id)
+var worker2id = Math.floor(Math.random() * 100)
+worker(lastDivId,'normal',worker2id);
+var worker3id = Math.floor(Math.random() * 100)
+worker(lastDivId,'Extreme',worker3id);
+
+$('#'+worker1id).click(function(){
+   $('#'+locationDiv).hide('smooth');
+   
+   });
+
+ currentdiv.appendChild(newdiv);
+var lastid=null;
+
+$('#'+selectId).on('change', function() {
+if(lastid!=null){
+$('#'+lastid).remove();
+}
+if(threeBDivId!=null){
+$('#'+threeBDivId).hide();
+}
+    console.log($('#'+selectId).prop('selectedIndex'));
+    var currentdiv= document.getElementById(div);
+    var lastDivId = Date.now();
+    threeBDivId=lastDivId;
+var newDiv= document.createElement('div');
+newDiv.setAttribute('id',lastDivId);
+currentdiv.appendChild(newDiv);
+var worker1id = Math.floor(Math.random() * 100)
+worker(lastDivId,'low',worker1id)
+var worker2id = Math.floor(Math.random() * 100)
+worker(lastDivId,'normal',worker2id);
+var worker3id = Math.floor(Math.random() * 100)
+worker(lastDivId,'Extreme',worker3id,);
+
+    var text= document.createTextNode('You Can Learn Live at'+cellArray(rowCSV[$('#'+selectId).prop('selectedIndex')+1])[columnNumber])
+    var p = document.createElement('p');
+    p.appendChild(text);
+    p.setAttribute('id','shit');
+    lastid='shit'
+    currentdiv.appendChild(p);
+   $('#'+locationDiv).hide('smooth');
+   $('#'+worker1id).click(function(){
+   $('#'+lastid).remove();
+   });
+});
+}
+$.when(csvLoader()).done(function(a1) {
+ liveManager('bardash1','any','vb1','bardash2','location1',0,1,"1")
+onlineManager('bardash2','vb2','bardash1',1,0)
+ 
+});
+
+</script>
+<style>
+
+#navp{
+  
+ 
+
+  padding-left:20px;
+  bdorder: 2px solid black;
+  border-radius:30px;
+  
+}
+#navbar a{
+  font-size:18px !Important;
+}
+.navbar a:hover {
+  border-bottom: 3px solid red;
+}
+
+.navbar a.active {
+  border-bottom: 3px solid red;
+  ocolor:red;
+}
+.btn-custom-1 {
+  text-align:center;
+  position:relative !Important;
+  padding-top:15px !Important;
+  height:50px !Important;
+  border-radius: 30px !Important;
+  border-top-right-radius: 0 !Important;
+  border-bottom-left-radius: 0 !Important;  }
+  .btn {
+  border-radius: 30px;
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  padding: 10px 20px;
+  text-decoration: none; }
+  .btn:active, .btn:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+  .btn.btn-teal {
+    background: #16c3b0; }
+  .btn.btn-danger {
+    background: #fd4d40; }
+  .btn.btn-outline-white {
+    border-color: #fff;
+    background: transparent;
+    color: #fff; }
+#violinBdiv,#violinDiv{
+  display:none;
+}
+#mainDiv{
+  background-image: url("https://theplanetd.com/images/India-Holi-festival-face-child-1.jpg");
+      background-position: top center;
+    background-attachment:scroll;
+    background-size: cover;
+}
+#parallax1 {
+  height: 500px;
+  width:100%;
+}
+h1 {
+  padding-top: 10%;
+}
+#parallax1 {
+  background: url('https://static.pexels.com/photos/226232/pexels-photo-226232.jpeg') no-repeat center;
+  background-attachment: fixed;
+}
+
+</style>
